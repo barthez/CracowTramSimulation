@@ -8,7 +8,10 @@
 #ifndef VEHICLE_H
 #define	VEHICLE_H
 
-class Vehicle {
+#include "Entity.h"
+
+
+class Vehicle : public Entity {
 public:
     Vehicle();
     Vehicle(const Vehicle& orig);

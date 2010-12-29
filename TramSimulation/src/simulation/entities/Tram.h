@@ -8,6 +8,8 @@
 #ifndef TRAM_H
 #define	TRAM_H
 
+#include "Vehicle.h"
+
 class Tram: public Vehicle {
 public:
     Tram();

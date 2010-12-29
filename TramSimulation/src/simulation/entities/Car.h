@@ -8,7 +8,9 @@
 #ifndef CAR_H
 #define	CAR_H
 
-class Car {
+#include "Vehicle.h"
+
+class Car: public Vehicle {
 public:
     Car();
     Car(const Car& orig);

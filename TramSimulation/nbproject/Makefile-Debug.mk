@@ -33,13 +33,22 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Application.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/Car.o \
-	${OBJECTDIR}/Vehicle.o \
-	${OBJECTDIR}/Tram.o \
-	${OBJECTDIR}/Field.o \
-	${OBJECTDIR}/Board.o
+	${OBJECTDIR}/src/simulation/entities/TramStop.o \
+	${OBJECTDIR}/src/simulation/Field.o \
+	${OBJECTDIR}/src/main.o \
+	${OBJECTDIR}/src/simulation/entities/Entity.o \
+	${OBJECTDIR}/src/tinyxml/tinyxmlparser.o \
+	${OBJECTDIR}/src/simulation/Board.o \
+	${OBJECTDIR}/src/simulation/entities/Tram.o \
+	${OBJECTDIR}/src/Application.o \
+	${OBJECTDIR}/src/tinyxml/tinyxml.o \
+	${OBJECTDIR}/src/simulation/TimeSpan.o \
+	${OBJECTDIR}/src/simulation/entities/Vehicle.o \
+	${OBJECTDIR}/src/tinyxml/tinystr.o \
+	${OBJECTDIR}/src/simulation/Time.o \
+	${OBJECTDIR}/src/simulation/entities/Car.o \
+	${OBJECTDIR}/src/tinyxml/xmltest.o \
+	${OBJECTDIR}/src/tinyxml/tinyxmlerror.o
 
 
 # C Compiler Flags
@@ -66,40 +75,85 @@ dist/Debug/GNU-Linux-x86/tramsimulation: ${OBJECTFILES}
 	${MKDIR} -p dist/Debug/GNU-Linux-x86
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tramsimulation ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/Application.o: Application.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/simulation/entities/TramStop.o: src/simulation/entities/TramStop.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Application.o Application.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/TramStop.o src/simulation/entities/TramStop.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/simulation/Field.o: src/simulation/Field.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Field.o src/simulation/Field.cpp
 
-${OBJECTDIR}/Car.o: Car.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/main.o: src/main.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Car.o Car.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
-${OBJECTDIR}/Vehicle.o: Vehicle.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/simulation/entities/Entity.o: src/simulation/entities/Entity.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Vehicle.o Vehicle.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Entity.o src/simulation/entities/Entity.cpp
 
-${OBJECTDIR}/Tram.o: Tram.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/tinyxml/tinyxmlparser.o: src/tinyxml/tinyxmlparser.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Tram.o Tram.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxmlparser.o src/tinyxml/tinyxmlparser.cpp
 
-${OBJECTDIR}/Field.o: Field.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/simulation/Board.o: src/simulation/Board.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Field.o Field.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Board.o src/simulation/Board.cpp
 
-${OBJECTDIR}/Board.o: Board.cpp 
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/src/simulation/entities/Tram.o: src/simulation/entities/Tram.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Board.o Board.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Tram.o src/simulation/entities/Tram.cpp
+
+${OBJECTDIR}/src/Application.o: src/Application.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Application.o src/Application.cpp
+
+${OBJECTDIR}/src/tinyxml/tinyxml.o: src/tinyxml/tinyxml.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxml.o src/tinyxml/tinyxml.cpp
+
+${OBJECTDIR}/src/simulation/TimeSpan.o: src/simulation/TimeSpan.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/TimeSpan.o src/simulation/TimeSpan.cpp
+
+${OBJECTDIR}/src/simulation/entities/Vehicle.o: src/simulation/entities/Vehicle.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Vehicle.o src/simulation/entities/Vehicle.cpp
+
+${OBJECTDIR}/src/tinyxml/tinystr.o: src/tinyxml/tinystr.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinystr.o src/tinyxml/tinystr.cpp
+
+${OBJECTDIR}/src/simulation/Time.o: src/simulation/Time.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Time.o src/simulation/Time.cpp
+
+${OBJECTDIR}/src/simulation/entities/Car.o: src/simulation/entities/Car.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Car.o src/simulation/entities/Car.cpp
+
+${OBJECTDIR}/src/tinyxml/xmltest.o: src/tinyxml/xmltest.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/xmltest.o src/tinyxml/xmltest.cpp
+
+${OBJECTDIR}/src/tinyxml/tinyxmlerror.o: src/tinyxml/tinyxmlerror.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxmlerror.o src/tinyxml/tinyxmlerror.cpp
 
 # Subprojects
 .build-subprojects:

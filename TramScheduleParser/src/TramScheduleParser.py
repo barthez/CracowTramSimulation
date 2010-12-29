@@ -1,6 +1,6 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 
-import sys
+import sys 
 
 __author__="Bartłomiej Bułat <bartek.bulat at gmail.com>"
 __date__ ="$2010-12-29 20:25:58$"

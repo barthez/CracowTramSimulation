@@ -1,23 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="69">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true"
-                   kind="SOURCE_LOGICAL_FOLDER">
-      <itemPath>Application.cpp</itemPath>
-      <itemPath>Application.h</itemPath>
-      <itemPath>Board.cpp</itemPath>
-      <itemPath>Board.h</itemPath>
-      <itemPath>Car.cpp</itemPath>
-      <itemPath>Car.h</itemPath>
-      <itemPath>Field.cpp</itemPath>
-      <itemPath>Field.h</itemPath>
-      <itemPath>Tram.cpp</itemPath>
-      <itemPath>Tram.h</itemPath>
-      <itemPath>Vehicle.cpp</itemPath>
-      <itemPath>Vehicle.h</itemPath>
-      <itemPath>main.cpp</itemPath>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="simulation"
+                     displayName="simulation"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <logicalFolder name="entities"
+                       displayName="entities"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>src/simulation/entities/Car.cpp</itemPath>
+          <itemPath>src/simulation/entities/Car.h</itemPath>
+          <itemPath>src/simulation/entities/Entity.cpp</itemPath>
+          <itemPath>src/simulation/entities/Entity.h</itemPath>
+          <itemPath>src/simulation/entities/Tram.cpp</itemPath>
+          <itemPath>src/simulation/entities/Tram.h</itemPath>
+          <itemPath>src/simulation/entities/TramStop.cpp</itemPath>
+          <itemPath>src/simulation/entities/TramStop.h</itemPath>
+          <itemPath>src/simulation/entities/Vehicle.cpp</itemPath>
+          <itemPath>src/simulation/entities/Vehicle.h</itemPath>
+        </logicalFolder>
+        <itemPath>src/simulation/Board.cpp</itemPath>
+        <itemPath>src/simulation/Board.h</itemPath>
+        <itemPath>src/simulation/Field.cpp</itemPath>
+        <itemPath>src/simulation/Field.h</itemPath>
+        <itemPath>src/simulation/Time.cpp</itemPath>
+        <itemPath>src/simulation/Time.h</itemPath>
+        <itemPath>src/simulation/TimeSpan.cpp</itemPath>
+        <itemPath>src/simulation/TimeSpan.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="tinyxml"
+                     displayName="tinyxml"
+                     projectFiles="true"
+                     kind="SOURCE_LOGICAL_FOLDER">
+        <logicalFolder name="docs"
+                       displayName="docs"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>src/tinyxml/docs/annotated.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlAttribute-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlAttribute.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlAttribute.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlBase-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlBase.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlBase.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlComment-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlComment.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlComment.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDeclaration-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDeclaration.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDeclaration.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDocument-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDocument.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlDocument.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlElement-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlElement.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlElement.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlHandle-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlHandle.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlNode-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlNode.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlNode.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlPrinter-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlPrinter.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlPrinter.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlText-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlText.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlText.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlUnknown-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlUnknown.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlUnknown.png</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlVisitor-members.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlVisitor.html</itemPath>
+          <itemPath>src/tinyxml/docs/classTiXmlVisitor.png</itemPath>
+          <itemPath>src/tinyxml/docs/classes.html</itemPath>
+          <itemPath>src/tinyxml/docs/deprecated.html</itemPath>
+          <itemPath>src/tinyxml/docs/doxygen.css</itemPath>
+          <itemPath>src/tinyxml/docs/doxygen.png</itemPath>
+          <itemPath>src/tinyxml/docs/files.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x63.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x64.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x65.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x66.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x67.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x69.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x6c.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x6e.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x6f.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x70.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x71.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x72.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x73.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x74.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x75.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_0x76.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_enum.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x63.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x64.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x65.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x66.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x67.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x69.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x6c.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x6e.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x70.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x71.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x72.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x73.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x74.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x75.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_func_0x76.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_rela.html</itemPath>
+          <itemPath>src/tinyxml/docs/functions_vars.html</itemPath>
+          <itemPath>src/tinyxml/docs/hierarchy.html</itemPath>
+          <itemPath>src/tinyxml/docs/index.html</itemPath>
+          <itemPath>src/tinyxml/docs/pages.html</itemPath>
+          <itemPath>src/tinyxml/docs/tab_b.gif</itemPath>
+          <itemPath>src/tinyxml/docs/tab_l.gif</itemPath>
+          <itemPath>src/tinyxml/docs/tab_r.gif</itemPath>
+          <itemPath>src/tinyxml/docs/tabs.css</itemPath>
+          <itemPath>src/tinyxml/docs/tinystr_8h_source.html</itemPath>
+          <itemPath>src/tinyxml/docs/tinyxml_8h_source.html</itemPath>
+          <itemPath>src/tinyxml/docs/tutorial0.html</itemPath>
+        </logicalFolder>
+        <itemPath>src/tinyxml/Makefile</itemPath>
+        <itemPath>src/tinyxml/changes.txt</itemPath>
+        <itemPath>src/tinyxml/echo.dsp</itemPath>
+        <itemPath>src/tinyxml/readme.txt</itemPath>
+        <itemPath>src/tinyxml/tinyXmlTest.dsp</itemPath>
+        <itemPath>src/tinyxml/tinyXmlTest.vcproj</itemPath>
+        <itemPath>src/tinyxml/tinyXmlTestSTL.dsp</itemPath>
+        <itemPath>src/tinyxml/tinyXmlTestSTL.vcproj</itemPath>
+        <itemPath>src/tinyxml/tinystr.cpp</itemPath>
+        <itemPath>src/tinyxml/tinystr.h</itemPath>
+        <itemPath>src/tinyxml/tinyxml.cpp</itemPath>
+        <itemPath>src/tinyxml/tinyxml.dsw</itemPath>
+        <itemPath>src/tinyxml/tinyxml.h</itemPath>
+        <itemPath>src/tinyxml/tinyxml.sln</itemPath>
+        <itemPath>src/tinyxml/tinyxmlSTL.dsp</itemPath>
+        <itemPath>src/tinyxml/tinyxmlSTL.vcproj</itemPath>
+        <itemPath>src/tinyxml/tinyxml_lib.dsp</itemPath>
+        <itemPath>src/tinyxml/tinyxml_lib.vcproj</itemPath>
+        <itemPath>src/tinyxml/tinyxmlerror.cpp</itemPath>
+        <itemPath>src/tinyxml/tinyxmlparser.cpp</itemPath>
+        <itemPath>src/tinyxml/utf8test.gif</itemPath>
+        <itemPath>src/tinyxml/utf8test.xml</itemPath>
+        <itemPath>src/tinyxml/utf8testverify.xml</itemPath>
+        <itemPath>src/tinyxml/xmltest.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>src/Application.cpp</itemPath>
+      <itemPath>src/Application.h</itemPath>
+      <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -31,6 +167,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
