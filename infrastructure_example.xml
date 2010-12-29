@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE infrastructure SYSTEM "infrastructure.dtd">
+<infrastructure>
+  <lines>
+    <line number="50">
+      <tram number="50-01">
+	<tramstopschedule tramstop="dietla" direction="north">
+	  <time run="1">10:23</time>
+	  <time run="2">12:32</time>
+	</tramstopschedule>
+      </tram>
+    </line>
+  </lines>
+  <tramstops>
+    <tramstop id="dietla">
+      <name>Dietla</name>
+      <direction>	
+	<dirname>south</dirname>
+	<double/>
+	<position>12,32</position>
+      </direction>
+      <direction>
+	<dirname>north</dirname>
+	<position>12,34</position>
+      </direction>      
+    </tramstop>
+  </tramstops>
+</infrastructure>

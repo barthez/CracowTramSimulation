@@ -4,4 +4,4 @@ Projekt składa sie z dwóch aplikacji: jednej do parsowania rozkładów ze stro
 
 Program do parsowania bedzie produkował pliki XML zgodne z dołaczonym plikiem DTD zawierające czasy przyjazdów poszczególnych tramwajów (numer lini i numer pojazdu).
 
-Program do symulacji bedzie prezentował poruszeni sie tramwajów w Krakowie. Symulacja bedzie oparta o automaty komórkowe. Warstwa prezentacji mam nadzieję bedzie wykorzystana z gry OpenTTD, jesli nie, to prosta animacja w SDL.
+Program do symulacji bedzie prezentował poruszeni sie tramwajów w Krakowie. Symulacja bedzie oparta o automaty komórkowe. Warstwa prezentacji mam nadzieję bedzie wykorzystana z gry OpenTTD, jesli nie, to prosta animacja w SDL. Parsowanie XML przy pomocy biblioteki TinyXML.
