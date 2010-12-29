@@ -1,0 +1,7 @@
+#Pliki tymaczasowe
+*~
+*.tmp
+*.bak
+
+#Pliki obiektow
+*.o
