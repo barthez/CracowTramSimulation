@@ -2,6 +2,18 @@
 <configurationDescriptor version="69">
   <logicalFolder name="root" displayName="root" projectFiles="true">
     <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="f1" displayName="app" projectFiles="true">
+        <itemPath>src/app/Application.cpp</itemPath>
+        <itemPath>src/app/Application.h</itemPath>
+        <itemPath>src/app/Events.cpp</itemPath>
+        <itemPath>src/app/Events.h</itemPath>
+        <itemPath>src/app/Exceptions.cpp</itemPath>
+        <itemPath>src/app/Exceptions.h</itemPath>
+        <itemPath>src/app/Font.cpp</itemPath>
+        <itemPath>src/app/Font.h</itemPath>
+        <itemPath>src/app/Surface.cpp</itemPath>
+        <itemPath>src/app/Surface.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="simulation"
                      displayName="simulation"
                      projectFiles="true"
@@ -151,8 +163,6 @@
         <itemPath>src/tinyxml/utf8testverify.xml</itemPath>
         <itemPath>src/tinyxml/xmltest.cpp</itemPath>
       </logicalFolder>
-      <itemPath>src/Application.cpp</itemPath>
-      <itemPath>src/Application.h</itemPath>
       <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -179,7 +189,14 @@
         <platform>2</platform>
       </toolsSet>
       <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lSDL -lSDL_image -lSDL_ttf -lpthread</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="src/tinyxml/xmltest.cpp" ex="true" tool="1">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>

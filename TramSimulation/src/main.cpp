@@ -7,13 +7,15 @@
 
 #include <cstdlib>
 
+#include "app/Application.h"
+
 using namespace std;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-
-    return 0;
+  Application app(800,600,32, "Symulacja Krakowskiej Sieci Tramwajowej");
+  return app.Execute();
 }
 

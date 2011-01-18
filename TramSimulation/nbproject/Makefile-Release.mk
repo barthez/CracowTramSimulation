@@ -35,16 +35,20 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/src/simulation/entities/TramStop.o \
 	${OBJECTDIR}/src/simulation/Field.o \
+	${OBJECTDIR}/src/app/Exceptions.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/simulation/entities/Entity.o \
 	${OBJECTDIR}/src/tinyxml/tinyxmlparser.o \
 	${OBJECTDIR}/src/simulation/Board.o \
 	${OBJECTDIR}/src/simulation/entities/Tram.o \
-	${OBJECTDIR}/src/Application.o \
 	${OBJECTDIR}/src/tinyxml/tinyxml.o \
 	${OBJECTDIR}/src/simulation/TimeSpan.o \
+	${OBJECTDIR}/src/app/Application.o \
+	${OBJECTDIR}/src/app/Surface.o \
+	${OBJECTDIR}/src/app/Events.o \
 	${OBJECTDIR}/src/simulation/entities/Vehicle.o \
 	${OBJECTDIR}/src/tinyxml/tinystr.o \
+	${OBJECTDIR}/src/app/Font.o \
 	${OBJECTDIR}/src/simulation/Time.o \
 	${OBJECTDIR}/src/simulation/entities/Car.o \
 	${OBJECTDIR}/src/tinyxml/xmltest.o \
@@ -85,6 +89,11 @@ ${OBJECTDIR}/src/simulation/Field.o: src/simulation/Field.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Field.o src/simulation/Field.cpp
 
+${OBJECTDIR}/src/app/Exceptions.o: src/app/Exceptions.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Exceptions.o src/app/Exceptions.cpp
+
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
@@ -110,11 +119,6 @@ ${OBJECTDIR}/src/simulation/entities/Tram.o: src/simulation/entities/Tram.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Tram.o src/simulation/entities/Tram.cpp
 
-${OBJECTDIR}/src/Application.o: src/Application.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Application.o src/Application.cpp
-
 ${OBJECTDIR}/src/tinyxml/tinyxml.o: src/tinyxml/tinyxml.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
 	${RM} $@.d
@@ -125,6 +129,21 @@ ${OBJECTDIR}/src/simulation/TimeSpan.o: src/simulation/TimeSpan.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/TimeSpan.o src/simulation/TimeSpan.cpp
 
+${OBJECTDIR}/src/app/Application.o: src/app/Application.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Application.o src/app/Application.cpp
+
+${OBJECTDIR}/src/app/Surface.o: src/app/Surface.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Surface.o src/app/Surface.cpp
+
+${OBJECTDIR}/src/app/Events.o: src/app/Events.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Events.o src/app/Events.cpp
+
 ${OBJECTDIR}/src/simulation/entities/Vehicle.o: src/simulation/entities/Vehicle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
@@ -134,6 +153,11 @@ ${OBJECTDIR}/src/tinyxml/tinystr.o: src/tinyxml/tinystr.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinystr.o src/tinyxml/tinystr.cpp
+
+${OBJECTDIR}/src/app/Font.o: src/app/Font.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Font.o src/app/Font.cpp
 
 ${OBJECTDIR}/src/simulation/Time.o: src/simulation/Time.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/simulation
