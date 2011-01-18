@@ -5,3 +5,5 @@
 
 #Pliki obiektow
 *.o
+TramSimulation/build
+TramSimulation/dist

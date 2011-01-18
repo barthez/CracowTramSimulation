@@ -1,8 +1,0 @@
-build/Debug/GNU-Linux-x86/src/app/Surface.o: src/app/Surface.cpp \
- src/app/Surface.h src/app/Exceptions.h src/app/Font.h
-
-src/app/Surface.h:
-
-src/app/Exceptions.h:
-
-src/app/Font.h:
