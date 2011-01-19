@@ -35,12 +35,13 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/src/simulation/entities/TramStop.o \
 	${OBJECTDIR}/src/simulation/Field.o \
+	${OBJECTDIR}/src/app/View.o \
 	${OBJECTDIR}/src/app/Exceptions.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/simulation/entities/Entity.o \
 	${OBJECTDIR}/src/tinyxml/tinyxmlparser.o \
-	${OBJECTDIR}/src/simulation/Board.o \
 	${OBJECTDIR}/src/simulation/entities/Tram.o \
+	${OBJECTDIR}/src/simulation/Board.o \
 	${OBJECTDIR}/src/tinyxml/tinyxml.o \
 	${OBJECTDIR}/src/simulation/TimeSpan.o \
 	${OBJECTDIR}/src/app/Application.o \
@@ -89,6 +90,11 @@ ${OBJECTDIR}/src/simulation/Field.o: src/simulation/Field.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Field.o src/simulation/Field.cpp
 
+${OBJECTDIR}/src/app/View.o: src/app/View.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/app
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/View.o src/app/View.cpp
+
 ${OBJECTDIR}/src/app/Exceptions.o: src/app/Exceptions.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/app
 	${RM} $@.d
@@ -109,15 +115,15 @@ ${OBJECTDIR}/src/tinyxml/tinyxmlparser.o: src/tinyxml/tinyxmlparser.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxmlparser.o src/tinyxml/tinyxmlparser.cpp
 
-${OBJECTDIR}/src/simulation/Board.o: src/simulation/Board.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/simulation
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Board.o src/simulation/Board.cpp
-
 ${OBJECTDIR}/src/simulation/entities/Tram.o: src/simulation/entities/Tram.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Tram.o src/simulation/entities/Tram.cpp
+
+${OBJECTDIR}/src/simulation/Board.o: src/simulation/Board.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Board.o src/simulation/Board.cpp
 
 ${OBJECTDIR}/src/tinyxml/tinyxml.o: src/tinyxml/tinyxml.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml

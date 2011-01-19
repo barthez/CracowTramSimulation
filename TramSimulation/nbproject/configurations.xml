@@ -13,6 +13,8 @@
         <itemPath>src/app/Font.h</itemPath>
         <itemPath>src/app/Surface.cpp</itemPath>
         <itemPath>src/app/Surface.h</itemPath>
+        <itemPath>src/app/View.cpp</itemPath>
+        <itemPath>src/app/View.h</itemPath>
       </logicalFolder>
       <logicalFolder name="simulation"
                      displayName="simulation"

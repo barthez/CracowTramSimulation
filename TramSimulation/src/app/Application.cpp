@@ -28,19 +28,19 @@ bool Application::Init(int x, int y, int bpp, const char * title) {
 
 
   try {
-    font = new Font("czcionka.ttf", 20);
-    image = Surface::loadIMG("./image.png");
-    text = Surface::createText(*font, "bla bla bal", TTF_STYLE_NORMAL, 255,255,255);
+    image = Surface::loadIMG("./vw_ogorek.jpg");
+    text = new TextSurface("Bartek!", "czcionka.ttf", 20, TTF_STYLE_NORMAL, 255,255,255);
   } catch (SDLException & ex) {
     cout << ex.what() << std::endl;
     
   }
 
-  text.setOffset(20,20);
+  view = View(&this->display, &this->image);
 
-  delete font;
+
 //  SDL_EnableKeyRepeat(10, SDL_DEFAULT_REPEAT_INTERVAL / 3);
   TIME = SDL_GetTicks();
+  TIME2 = SDL_GetTicks();
   return true;
 }
 
@@ -50,14 +50,18 @@ void Application::onEvent(SDL_Event * Event) {
 
 void Application::Loop() {
   //Do some modifications
+  view.scrollAtScreenBorder(20, 5);
 
+  if ((TIME2+ 1000) <SDL_GetTicks()) {
+    text->setText("Super!");
+  }
 
 }
 
 void Application::Render() {
   //Render surfaces
-  image.draw(display);
-  text.draw(display);
+  view.draw();
+  text->draw(display);
 
   display.flip();
 }
@@ -104,6 +108,7 @@ void Application::MouseMove(Uint16 x, Uint16 y, Sint16 xrel, Sint16 yrel, bool r
 }
 
 void Application::Clean() {
+  delete text;
   display.close();
   SDL_Quit();
 }

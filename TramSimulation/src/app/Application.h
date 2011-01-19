@@ -13,6 +13,7 @@
 #include "Events.h"
 #include "Exceptions.h"
 #include "Surface.h"
+#include "View.h"
 
 using std::cout;
 using std::cin;
@@ -34,9 +35,11 @@ private:
     enum { AS_QUIT = 0, AS_MENU, AS_SIMULATION };
     int running;
     DisplaySurface display;
-    Surface image, text;
+    Surface image;
+    TextSurface * text;
+    View view;
     Font * font;
-    Uint32 TIME;
+    Uint32 TIME, TIME2;
 
 protected:
     void onEvent(SDL_Event * Event);

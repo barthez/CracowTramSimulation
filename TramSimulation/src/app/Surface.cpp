@@ -8,73 +8,60 @@
 
 #include "Surface.h"
 
-Surface::Surface() {
-  surf = NULL;
+void Surface::Clean() {
+  if (surf != NULL) {
+    SDL_FreeSurface(surf);
+    surf = NULL;
+  }
 }
 
-Surface::Surface(SDL_Surface * s, int xoffset, int yoffset) {
-  if ((this->surf = SDL_ConvertSurface(s, s->format, s->flags)) == NULL)
-    throw SDLException("Nie mogę skopiować powieszchni");
+void Surface::Init(SDL_Surface * s) {
+  this->surf = s;
 
-  this->offset.x = xoffset;
-  this->offset.y = yoffset;
-  this->offset.w = 0;
-  this->offset.h = 0;
+  this->setOffset(0, 0);
+  this->setCrop(0, 0, surf->w, surf->h);
+}
 
-  this->crop.x = 0;
-  this->crop.y = 0;
-  this->crop.w = this->surf->w;
-  this->crop.h = this->surf->h;
+Surface::Surface() {
+  surf = NULL;
+  this->setOffset(0, 0);
+  this->setCrop(0, 0, 0, 0);
 }
 
 Surface::Surface(const Surface & s) {
-  if ((this->surf = SDL_ConvertSurface(s.surf, s.surf->format, s.surf->flags)) == NULL)
+  SDL_Surface * copy;
+  if ((copy = SDL_ConvertSurface(s.surf, s.surf->format, s.surf->flags)) == NULL)
     throw SDLException("Nie mogę skopiować powieszchni");
 
-  this->offset.x = s.offset.x;
-  this->offset.y = s.offset.y;
-  this->offset.w = s.offset.w;
-  this->offset.h = s.offset.h;
-
-  this->crop.x = s.crop.x;
-  this->crop.y = s.crop.y;
-  this->crop.w = s.crop.w;
-  this->crop.h = s.crop.h;
+  Init(copy);
+  setOffset(s.offset.x, s.offset.y);
+  setCrop(s.crop.x, s.crop.y, s.crop.w, s.crop.h);
 }
 
-
 Surface & Surface::operator=(const Surface & s) {
-  if (surf != NULL) {
-    SDL_FreeSurface(surf);
-    surf = NULL;
-  }
+  if (this == &s) return *this;
 
-  if ((this->surf = SDL_ConvertSurface(s.surf, s.surf->format, s.surf->flags)) == NULL)
+  SDL_Surface * copy;
+  if ((copy = SDL_ConvertSurface(s.surf, s.surf->format, s.surf->flags)) == NULL)
     throw SDLException("Nie mogę skopiować powieszchni");
 
-  this->offset.x = s.offset.x;
-  this->offset.y = s.offset.y;
-  this->offset.w = s.offset.w;
-  this->offset.h = s.offset.h;
-
-  this->crop.x = s.crop.x;
-  this->crop.y = s.crop.y;
-  this->crop.w = s.crop.w;
-  this->crop.h = s.crop.h;
+  Clean();
+  Init(copy);
+  setOffset(s.offset.x, s.offset.y);
+  setCrop(s.crop.x, s.crop.y, s.crop.w, s.crop.h);
 }
 
 Surface::~Surface() {
-  if (surf != NULL) {
-    SDL_FreeSurface(surf);
-    surf = NULL;
-  }
+  Clean();
 }
 
 void Surface::setCrop(int x, int y, int w, int h) {
   this->crop.x = x;
   this->crop.y = y;
-  this->crop.h = w;
-  this->crop.w = h;
+  if (w > 0 && h > 0) {
+    this->crop.h = h;
+    this->crop.w = w;
+  }
 }
 
 void Surface::setOffset(int x, int y) {
@@ -84,7 +71,7 @@ void Surface::setOffset(int x, int y) {
 
 bool Surface::draw(const Surface & s) {
   if (surf == NULL) return false;
-  
+
   if (SDL_BlitSurface(this->surf, &this->crop, s.surf, &this->offset) < 0)
     throw SDLException("Nie można wyrysować powieszchni");
   return true;
@@ -119,8 +106,8 @@ Surface Surface::createDisplay(int x, int y, int bpp, Uint32 flags) {
   if (display == NULL) {
     throw SDLException("Nie można utworzyć warstwy wyświetlacza");
   }
-  Surface d = Surface(display);
-  SDL_FreeSurface(display);
+  Surface d;
+  d.Init(display);
   return d;
 }
 
@@ -135,10 +122,10 @@ Surface Surface::loadBMP(const char * filename, int r, int g, int b) {
 
   image = SDL_DisplayFormat(loadedImage);
   SDL_SetColorKey(image, SDL_SRCCOLORKEY, SDL_MapRGB(image->format, r, g, b));
-  Surface s(image);
-
   SDL_FreeSurface(loadedImage);
-  SDL_FreeSurface(image);
+
+  Surface s;
+  s.Init(image);
 
   return s;
 }
@@ -152,62 +139,15 @@ Surface Surface::loadIMG(const char * filename) {
   if (loadedImage == NULL)
     throw SDLException("Nie mogę załadować obrazka");
 
-
   image = SDL_DisplayFormat(loadedImage);
-  Surface s(image);
-
   SDL_FreeSurface(loadedImage);
-  SDL_FreeSurface(image);
+  Surface s;
+  s.Init(image);
 
   return s;
 }
 
-Surface Surface::createText(Font & font, const char * text, int style, const int r, const int g, const int b) {
-  SDL_Surface * surf, *surfformat;
-
-
-  font.setStyle(style);
-  SDL_Color color = {r, g, b};
-
-  surf = TTF_RenderUTF8_Blended(font.getFontStruct(), text, color);
-  if (surf == NULL)
-    throw SDLException("Nie mogę utworzyć powieszchni tekstowej");
-  surfformat = SDL_DisplayFormat(surf);
-  if (surf == NULL)
-    throw SDLException("Nie mogę sformatować powieszchni do formatu wyświetlacza");
-
-  Surface s(surf);
-
-  SDL_FreeSurface(surf);
-  SDL_FreeSurface(surfformat);
-
-  return s;
-}
-
-Surface Surface::createShadowedText(Font & font, const char * text, int style, const int r, const int g, const int b, const int sr, const int sg, const int sb) {
-  SDL_Surface * surf, *surfformat;
-
-
-  font.setStyle(style);
-  SDL_Color color = {r, g, b};
-  SDL_Color shadow = {sr, sg, sb};
-
-  surf = TTF_RenderUTF8_Shaded(font.getFontStruct(), text, color, shadow);
-  if (surf == NULL)
-    throw SDLException("Nie mogę utworzyć powieszchni tekstowej");
-  surfformat = SDL_DisplayFormat(surf);
-  if (surf == NULL)
-    throw SDLException("Nie mogę sformatować powieszchni do formatu wyświetlacza");
-
-  Surface s(surf);
-
-  SDL_FreeSurface(surf);
-  SDL_FreeSurface(surfformat);
-
-  return s;
-}
-
-DisplaySurface::DisplaySurface(): Surface() {
+DisplaySurface::DisplaySurface() : Surface() {
   opened = false;
 }
 
@@ -216,8 +156,8 @@ DisplaySurface::~DisplaySurface() {
 }
 
 bool DisplaySurface::open(int x, int y, int bpp, Uint32 flags) {
-  if (! opened) {
-    this->surf = SDL_SetVideoMode(x, y, bpp, flags);;
+  if (!opened) {
+    Init(SDL_SetVideoMode(x, y, bpp, flags));
     opened = true;
     return true;
   }
@@ -226,12 +166,67 @@ bool DisplaySurface::open(int x, int y, int bpp, Uint32 flags) {
 
 bool DisplaySurface::close() {
   if (opened) {
-    if (this->surf != NULL) {
-      SDL_FreeSurface(this->surf);
-      this->surf = NULL;
-    }
+    Clean();
     opened = false;
     return true;
   }
   return false;
 }
+
+void TextSurface::Init(const char* t, int style, int r, int g, int b) {
+  this->style = style;
+  this->color.r = r;
+  this->color.g = g;
+  this->color.b = b;
+
+  this->text = new char[strlen(t) + 1];
+  strcpy(this->text, t);
+
+  Surface::Init(font.renderText(this->text, style, &color));
+}
+
+void TextSurface::Clean() {
+  Surface::Clean();
+  if (this->text != NULL) {
+    delete [] this->text;
+    this->text = NULL;
+  }
+}
+
+TextSurface::TextSurface(const char* text, const char* fontfile, int size, int style, int r, int g, int b) : font(fontfile, size) {
+  Init(text, style, r, g, b);
+}
+
+TextSurface::TextSurface(const TextSurface& s) : font(s.font) {
+  Init(s.text, s.style, s.color.r, s.color.g, s.color.b);
+}
+
+TextSurface & TextSurface::operator =(const TextSurface& s) {
+  if (this == &s) return *this;
+
+  Clean();
+  this->font = font;
+  Init(s.text, s.style, s.color.r, s.color.g, s.color.b);
+  return *this;
+}
+
+TextSurface::~TextSurface() {
+  Clean();
+}
+
+void TextSurface::setText(const char * t) {
+  if (t == this->text) {
+    Surface::Clean();
+    Surface::Init(font.renderText(t, style, &color));
+  } else {
+    Clean();
+    Init(t, this->style, this->color.r, this->color.g, this->color.b);
+  }
+}
+
+void TextSurface::setSize(int size) {
+  if (font.setSize(size) != size) {
+    this->setText(this->text);
+  }
+}
+
