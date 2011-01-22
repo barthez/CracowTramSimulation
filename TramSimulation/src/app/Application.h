@@ -14,6 +14,7 @@
 #include "Exceptions.h"
 #include "Surface.h"
 #include "View.h"
+#include "../simulation/Board.h"
 
 using std::cout;
 using std::cin;
@@ -35,11 +36,13 @@ private:
     enum { AS_QUIT = 0, AS_MENU, AS_SIMULATION };
     int running;
     DisplaySurface display;
+    Board board;
     Surface image;
-    TextSurface * text;
+    TextSurface * fps;
     View view;
     Font * font;
-    Uint32 TIME, TIME2;
+    Uint32 TIME, TIME_FPS, FRAME_COUNT;
+    bool showFPS, showExecTime;
 
 protected:
     void onEvent(SDL_Event * Event);

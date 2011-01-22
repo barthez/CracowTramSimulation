@@ -8,12 +8,24 @@
 #ifndef BOARD_H
 #define	BOARD_H
 
-class Board {
+#include "../app/Surface.h"
+#include <string>
+
+#include <iostream>
+#include <SDL/SDL_gfxPrimitives.h>
+#include "../tinyxml/tinyxml.h"
+#include "../app/Exceptions.h"
+
+class Board : public Surface {
 public:
-    Board();
+    Board(std::string filename = "");
     Board(const Board& orig);
     virtual ~Board();
+
+protected:
+  void Init();
 private:
+  TiXmlDocument doc;
 
 };
 

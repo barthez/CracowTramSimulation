@@ -9,28 +9,33 @@
 #define	EXCEPTIONS_H
 
 #include <exception>
-#include <cstring>
+#include <string>
+
+using std::string;
 
 class ApplicationException : public std::exception {
 public:
-  ApplicationException();
-  ApplicationException(const char * msg);
-  ApplicationException(const ApplicationException * ex);
-  virtual ~ApplicationException() throw ();
+  ApplicationException(const string & msg = "Application Exception") throw();
+  virtual ~ApplicationException() throw() {}
 
-  virtual const char * what();
+  virtual const char * what() throw();
 private:
-  char * msg;
+  string msg;
 };
 
 class SDLException : public ApplicationException {
 public:
-  SDLException(const char * m);
+  SDLException(const string & m = "SDL Exception") throw();
 };
 
 class TTFException : public SDLException {
 public:
-  TTFException(const char * m);
+  TTFException(const string & m = "TTF Exception") throw();
+};
+
+class TiXmlException : public ApplicationException {
+public:
+  TiXmlException(const string & m = "TiXml Exception") throw();
 };
 
 #endif	/* EXCEPTIONS_H */

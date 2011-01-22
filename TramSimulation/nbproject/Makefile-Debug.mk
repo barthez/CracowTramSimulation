@@ -43,14 +43,14 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/simulation/entities/Tram.o \
 	${OBJECTDIR}/src/simulation/Board.o \
 	${OBJECTDIR}/src/tinyxml/tinyxml.o \
-	${OBJECTDIR}/src/simulation/TimeSpan.o \
 	${OBJECTDIR}/src/app/Application.o \
 	${OBJECTDIR}/src/app/Surface.o \
 	${OBJECTDIR}/src/app/Events.o \
 	${OBJECTDIR}/src/simulation/entities/Vehicle.o \
 	${OBJECTDIR}/src/tinyxml/tinystr.o \
 	${OBJECTDIR}/src/app/Font.o \
-	${OBJECTDIR}/src/simulation/Time.o \
+	${OBJECTDIR}/src/simulation/Simulation.o \
+	${OBJECTDIR}/src/simulation/DateTime.o \
 	${OBJECTDIR}/src/simulation/entities/Car.o \
 	${OBJECTDIR}/src/tinyxml/tinyxmlerror.o
 
@@ -69,7 +69,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lSDL -lSDL_image -lSDL_ttf -lpthread
+LDLIBSOPTIONS=-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -129,11 +129,6 @@ ${OBJECTDIR}/src/tinyxml/tinyxml.o: src/tinyxml/tinyxml.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxml.o src/tinyxml/tinyxml.cpp
 
-${OBJECTDIR}/src/simulation/TimeSpan.o: src/simulation/TimeSpan.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/simulation
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/TimeSpan.o src/simulation/TimeSpan.cpp
-
 ${OBJECTDIR}/src/app/Application.o: src/app/Application.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/app
 	${RM} $@.d
@@ -164,10 +159,15 @@ ${OBJECTDIR}/src/app/Font.o: src/app/Font.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/app/Font.o src/app/Font.cpp
 
-${OBJECTDIR}/src/simulation/Time.o: src/simulation/Time.cpp 
+${OBJECTDIR}/src/simulation/Simulation.o: src/simulation/Simulation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/simulation
 	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Time.o src/simulation/Time.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Simulation.o src/simulation/Simulation.cpp
+
+${OBJECTDIR}/src/simulation/DateTime.o: src/simulation/DateTime.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/DateTime.o src/simulation/DateTime.cpp
 
 ${OBJECTDIR}/src/simulation/entities/Car.o: src/simulation/entities/Car.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities

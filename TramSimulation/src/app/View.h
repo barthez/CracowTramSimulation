@@ -10,6 +10,7 @@
 
 #include "Surface.h"
 #include <vector>
+#include <string>
 
 typedef std::vector<Surface*> SurfacePointerList;
 typedef std::vector<Surface*>::iterator SPLIt;

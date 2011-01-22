@@ -7,35 +7,23 @@
 
 #include "Exceptions.h"
 
-ApplicationException::ApplicationException() {
-  std::exception();
+
+ApplicationException::ApplicationException(const string & s) throw() : std::exception() {
+  this->msg = s;
 }
 
-ApplicationException::ApplicationException(const char * msg) {
-  this->msg = new char[strlen(msg) + 1];
-  strcpy(this->msg, msg);
+const char * ApplicationException::what() throw(){
+  return msg.c_str();
 }
 
-ApplicationException::ApplicationException(const ApplicationException * ex) {
-  this->msg = new char[strlen(ex->msg) + 1];
-  strcpy(this->msg, ex->msg);
-}
-
-const char * ApplicationException::what() {
-  return msg;
-}
-
-ApplicationException::~ApplicationException() throw () {
-  if (msg != NULL) {
-    delete [] msg;
-    msg = NULL;
-  }
-}
-
-SDLException::SDLException(const char* m) : ApplicationException(m) {
+SDLException::SDLException(const string & m)  throw() : ApplicationException(m) {
 
 }
 
-TTFException::TTFException(const char* m) : SDLException(m) {
+TTFException::TTFException(const string & m) throw() : SDLException(m) {
+
+}
+
+TiXmlException::TiXmlException(const string & m) throw() : ApplicationException(m) {
 
 }

@@ -37,12 +37,12 @@
         </logicalFolder>
         <itemPath>src/simulation/Board.cpp</itemPath>
         <itemPath>src/simulation/Board.h</itemPath>
+        <itemPath>src/simulation/DateTime.cpp</itemPath>
+        <itemPath>src/simulation/DateTime.h</itemPath>
         <itemPath>src/simulation/Field.cpp</itemPath>
         <itemPath>src/simulation/Field.h</itemPath>
-        <itemPath>src/simulation/Time.cpp</itemPath>
-        <itemPath>src/simulation/Time.h</itemPath>
-        <itemPath>src/simulation/TimeSpan.cpp</itemPath>
-        <itemPath>src/simulation/TimeSpan.h</itemPath>
+        <itemPath>src/simulation/Simulation.cpp</itemPath>
+        <itemPath>src/simulation/Simulation.h</itemPath>
       </logicalFolder>
       <logicalFolder name="tinyxml"
                      displayName="tinyxml"
@@ -193,7 +193,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerOptionItem>-lSDL -lSDL_image -lSDL_ttf -lpthread</linkerOptionItem>
+            <linkerOptionItem>-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

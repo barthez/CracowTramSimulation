@@ -15,6 +15,8 @@
 #include "Exceptions.h"
 #include "Font.h"
 
+#include <iostream>
+
 class Surface {
 public:
   friend class View;

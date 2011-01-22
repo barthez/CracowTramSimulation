@@ -27,7 +27,7 @@ View::~View() {
 }
 
 void View::scrollAtScreenBorder(int size, int step) {
-  if (background == NULL) throw SDLException("Nie ustawiono żadnej warstwy tła");
+  if (background == NULL) throw SDLException(std::string("Nie ustawiono żadnej warstwy tła"));
   int x, y;
   SDL_GetMouseState(&x, &y);
   int l, t, r, b;

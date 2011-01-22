@@ -70,7 +70,10 @@ void Surface::setOffset(int x, int y) {
 }
 
 bool Surface::draw(const Surface & s) {
-  if (surf == NULL) return false;
+  if (surf == NULL) {
+    std::cout << "Empty surface";
+    return false;
+  }
 
   if (SDL_BlitSurface(this->surf, &this->crop, s.surf, &this->offset) < 0)
     throw SDLException("Nie można wyrysować powieszchni");
