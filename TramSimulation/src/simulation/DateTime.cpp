@@ -69,9 +69,13 @@ namespace Sim {
 
   }
 
+  int DateTimeSpan::getDay() const { return day; }
+  int DateTimeSpan::getWeek() const { return week; }
+
+
   Time::Time(int min, int hour) {
-    this->min = min%60;
-    this->hour = hour + (min/60);
+    this->min = min % 60;
+    this->hour = hour + (min / 60);
   }
 
   Time::~Time() {
@@ -89,13 +93,13 @@ namespace Sim {
   }
 
   Time Time::operator+(const TimeSpan & dt) {
-    return Time(this->min + dt.getMinute(), this->hour += dt.getHour() );
-    
+    return Time(this->min + dt.getMinute(), this->hour += dt.getHour());
+
   }
 
   Time & Time::operator +=(const TimeSpan & dt) {
     this->min += dt.getMinute();
-    this->hour = hour + (this->min/60);
+    this->hour = hour + (this->min / 60);
     this->min %= 60;
   }
 
@@ -108,7 +112,7 @@ namespace Sim {
   }
 
   bool Time::operator>=(const Time & t) {
-    return this->operator ==(t) && this->operator >(t);
+    return this->operator ==(t) && this->operator>(t);
   }
 
   bool Time::operator<(const Time & t) {
@@ -116,7 +120,60 @@ namespace Sim {
   }
 
   bool Time::operator<=(const Time & t) {
-    return this->operator ==(t) && this->operator <(t);
+    return this->operator ==(t) && this->operator<(t);
+  }
+
+  DateTime::DateTime(int min, int hour, int day, int week) : Time(min, hour) {
+    this->day = day;
+    this->week = week;
+  }
+
+  DateTime::DateTime(const Time & t, int day, int week) : Time(t) {
+    this->day = day;
+    this->week = week;
+  }
+
+  DateTime::~DateTime() {
+
+  }
+
+  const string & DateTime::dayOfWeek() const {
+    return DAYS_OF_WEEK[week];
+  }
+
+  DateTime::operator string() const {
+    std::ostringstream ss(std::ios::out);
+    ss << this->dayOfWeek() << " " << week << Time::operator  string();
+    return ss.str();
+  }
+
+  DateTime DateTime::operator+(const DateTimeSpan & st) {
+    Time::operator +(st);
+  }
+  
+  DateTime & DateTime::operator +=(const DateTimeSpan & dt) {
+    Time::operator +=(dt);
+    this->day += dt.getDay();
+    this->week += dt.getWeek() + this->day/7;
+    this->day %= 7;
+    return *this;    
+  }
+  
+  bool DateTime::operator==(const DateTime & t) {
+    true; //FIXME
+  }
+  bool DateTime::operator>(const DateTime & t) {
+    true; //FIXME
+
+  }
+  bool DateTime::operator>=(const DateTime & t) {
+    true; //FIXME
+  }
+  bool DateTime::operator<(const DateTime & t) {
+    true; //FIXME
+  }
+  bool DateTime::operator<=(const DateTime & t) {
+    true; //FIXME
   }
 
 

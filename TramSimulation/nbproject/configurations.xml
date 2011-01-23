@@ -30,17 +30,22 @@
           <itemPath>src/simulation/entities/Entity.h</itemPath>
           <itemPath>src/simulation/entities/Tram.cpp</itemPath>
           <itemPath>src/simulation/entities/Tram.h</itemPath>
-          <itemPath>src/simulation/entities/TramStop.cpp</itemPath>
-          <itemPath>src/simulation/entities/TramStop.h</itemPath>
           <itemPath>src/simulation/entities/Vehicle.cpp</itemPath>
           <itemPath>src/simulation/entities/Vehicle.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1"
+                       displayName="fields"
+                       projectFiles="true"
+                       kind="SOURCE_LOGICAL_FOLDER">
+          <itemPath>src/simulation/fields/Field.cpp</itemPath>
+          <itemPath>src/simulation/fields/Field.h</itemPath>
+          <itemPath>src/simulation/fields/TramStop.cpp</itemPath>
+          <itemPath>src/simulation/fields/TramStop.h</itemPath>
         </logicalFolder>
         <itemPath>src/simulation/Board.cpp</itemPath>
         <itemPath>src/simulation/Board.h</itemPath>
         <itemPath>src/simulation/DateTime.cpp</itemPath>
         <itemPath>src/simulation/DateTime.h</itemPath>
-        <itemPath>src/simulation/Field.cpp</itemPath>
-        <itemPath>src/simulation/Field.h</itemPath>
         <itemPath>src/simulation/Simulation.cpp</itemPath>
         <itemPath>src/simulation/Simulation.h</itemPath>
       </logicalFolder>

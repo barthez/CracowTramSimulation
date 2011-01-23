@@ -1,23 +1,23 @@
 #!/usr/bin/python
 
+import math
+import sys
+import xml.dom.minidom
 from xml.dom.minidom import Document
 from xml.etree.ElementTree import Element
-from encodings.utf_16 import encode
-import sys
+
 import urllib.error
 import urllib.request
-import xml.dom.minidom
-import math
 
-__author__="Bartłomiej Bułat <bartek.bulat at gmail.com>"
-__date__ ="$2010-12-29 20:25:58$"
+__author__ = "Bartłomiej Bułat <bartek.bulat at gmail.com>"
+__date__ = "$2010-12-29 20:25:58$"
 
 def main(argv):
   lineNum = [i for i in range(1, 25)]
   lineNum.extend([40, 50, 51])
-  minN =60;
+  minN = 60;
   maxN = 0;
-  minE =60;
+  minE = 60;
   maxE = 0;
   przystanki = {}
 
@@ -40,11 +40,10 @@ def main(argv):
           tt = float(t.firstChild.nodeValue)
           gg = float(g.firstChild.nodeValue)
           #print("{} {} {}".format(name, tt, gg) )
-          if name in przystanki:
-            if len([ el for el in przystanki[name] if el == (tt, gg) ]) == 0:
-              przystanki[name].append( ( tt,gg) )
-          else:
-            przystanki[name] = [ (tt,gg) ]
+          if not name in przystanki:
+            przystanki[name] = {"location": []}
+          if not (tt,gg) in przystanki[name]["location"]:
+            przystanki[name]["location"].append( (tt, gg) )
 
           if tt > maxN:
             maxN = tt
@@ -56,43 +55,94 @@ def main(argv):
           if gg < minE:
             minE = gg;
 
-  minTT = minN - 0.002;
-  minGG = minE - 0.002;
-  maxTT = maxN + 0.002;
-  maxGG = maxE + 0.002;
+  for name, info in przystanki.items():
+    xx = [a for a, _ in przystanki[name]["location"]];
+    yy = [b for _, b in przystanki[name]["location"]];
+    przystanki[name]["mean_location"] = (sum(xx) / len(xx), sum(yy) / len(yy))
+    przystanki[name]["locations_number"] = len(przystanki[name]["location"])
 
-  y = round(round(maxTT-minTT,4)*20000)
-  x = round(round(maxGG-minGG,4)*20000)
+  for line in lineNum:
+    rozklad = xml.dom.minidom.parse("rozklady/rozklad{}.xml".format(line))
+    for p in rozklad.getElementsByTagName("stop"):
+      next = p.nextSibling.nextSibling;
+      prev = p.previousSibling.previousSibling;
+      name = p.getAttribute("name")
+      if not "stops" in przystanki[name]:
+        przystanki[name]["stops"] = { "from" : [], "to" : []}
+      if next != None:
+        nextName = next.getAttribute("name")
+        if not nextName in przystanki[name]["stops"]["to"]:
+          przystanki[name]["stops"]["to"].append( nextName )
+        #print("   Kolejny : {}".format(nextName))
+      else:
+        next = p.parentNode.firstChild.nextSibling
+        nextName = next.getAttribute("name")
+        if not nextName in przystanki[name]["stops"]["to"]:
+          przystanki[name]["stops"]["to"].append( nextName )
 
-  for przys, loc in przystanki.items():
-    przystanki[przys] = [ ( round(round(e-minGG,4)*20000),y - round(round(n-minTT,4)*20000)  ) for n, e in loc]
+      if prev != None:
+        prevName = prev.getAttribute("name")
+        if not prevName in przystanki[name]["stops"]["from"]:
+          przystanki[name]["stops"]["from"].append( prevName )
+        #print("   Poprzedni: {}".format(prevName))
 
+  minTT = minN;
+  minGG = minE;
+  maxTT = maxN;
+  maxGG = maxE;
+
+  factor = 5000;
+
+  y = round(round(maxTT-minTT, 4) * factor)
+  x = round(round(maxGG-minGG, 4) * factor)
+
+
+
+  for przys, info in przystanki.items():
+    #przystanki[przys]["location"] = [(round(round(e-minGG, 4) * factor), y - round(round(n-minTT, 4) * factor)) for n, e in info["location"]]
+    (n, e) = info["mean_location"]
+    przystanki[przys]["mean_location"] = (round(round(e-minGG, 4) * factor), y - round(round(n-minTT, 4) * factor) )
+
+  print(len(przystanki))
   # @type doc Document
   doc = xml.dom.minidom.Document();
   root = doc.createElement("mapa")
   przyElem = doc.createElement('Przystanki')
-  for przys, loc in przystanki.items():
+  for przys, info in przystanki.items():
+    print("Przystanek: {}".format(przys));
+    print("    from: {}".format( przystanki[przys]["stops"]["from"]))
+    print("    to: {}".format( przystanki[przys]["stops"]["to"]))
+    print("    MeanLoc: {}/{}".format( przystanki[przys]["mean_location"], przystanki[name]["location"] ) )
     pElem = doc.createElement("Przystanek")
     pElem.setAttribute("name", przys)
-    locsElem = doc.createElement("locations")
-    for n, e in loc:
-      locElem = doc.createElement("loc")
-      locElem.setAttribute("x", str(n));
-      locElem.setAttribute("y", str(e));
-      locsElem.appendChild(locElem)
-    pElem.appendChild(locsElem)
+    #początek lokalizacji
+    locElem = doc.createElement("location")
+    (n, e) = info["mean_location"]
+    xElem = doc.createElement("x")
+    xElem.appendChild(doc.createTextNode(str(n)))
+    yElem = doc.createElement("y")
+    yElem.appendChild(doc.createTextNode(str(e)))
+    locElem.appendChild(xElem)
+    locElem.appendChild(yElem)
+    pElem.appendChild(locElem)
+    #koniec lokalizacji
+
+    #poczatek przystanków z i do
+
     przyElem.appendChild(pElem)
   sizeElem = doc.createElement("size")
   sizeElem.setAttribute("x", str(x))
-  sizeElem.setAttribute("y", str(y) )
+  sizeElem.setAttribute("y", str(y))
   root.appendChild(sizeElem)
   root.appendChild(przyElem)
   doc.appendChild(root)
 
   file = open("przystanki.xml", "w")
-  file.write( doc.toxml() )
+  file.write(doc.toxml())
   file.close();
-  print ( "File save OK!" )
+  print ("File save OK!")
+
+ 
     
 
   #print("N {}-{} E {}-{}".format(minN, maxN, minE, maxE))
@@ -103,4 +153,4 @@ def main(argv):
   #print(przystanki["Kabel"])
   #print(przystanki["Bieżanowska"])
 if __name__ == "__main__":
-    main(sys.argv)
+  main(sys.argv)

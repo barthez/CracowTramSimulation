@@ -12,9 +12,21 @@
 #include <string>
 
 #include <iostream>
+#include <vector>
+#include <map>
+#include <memory>
 #include <SDL/SDL_gfxPrimitives.h>
 #include "../tinyxml/tinyxml.h"
 #include "../app/Exceptions.h"
+#include "fields/Field.h"
+#include "fields/TramStop.h"
+
+
+
+typedef std::auto_ptr<Field> pField;
+typedef std::vector< Field* > FieldVector;
+typedef std::vector< FieldVector > FieldMatrix;
+typedef std::map<std::string, TramStop* > StopMap;
 
 class Board : public Surface {
 public:
@@ -22,10 +34,14 @@ public:
     Board(const Board& orig);
     virtual ~Board();
 
+    virtual void LMBPressed(Uint16 x, Uint16 y);
+
 protected:
   void Init();
 private:
   TiXmlDocument doc;
+  FieldMatrix board;
+  StopMap tramStops;
 
 };
 

@@ -33,8 +33,6 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/src/simulation/entities/TramStop.o \
-	${OBJECTDIR}/src/simulation/Field.o \
 	${OBJECTDIR}/src/app/View.o \
 	${OBJECTDIR}/src/app/Exceptions.o \
 	${OBJECTDIR}/src/main.o \
@@ -42,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/tinyxml/tinyxmlparser.o \
 	${OBJECTDIR}/src/simulation/entities/Tram.o \
 	${OBJECTDIR}/src/simulation/Board.o \
+	${OBJECTDIR}/src/simulation/fields/Field.o \
 	${OBJECTDIR}/src/tinyxml/tinyxml.o \
 	${OBJECTDIR}/src/app/Application.o \
 	${OBJECTDIR}/src/app/Surface.o \
@@ -53,7 +52,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/simulation/DateTime.o \
 	${OBJECTDIR}/src/simulation/entities/Car.o \
 	${OBJECTDIR}/src/tinyxml/xmltest.o \
-	${OBJECTDIR}/src/tinyxml/tinyxmlerror.o
+	${OBJECTDIR}/src/tinyxml/tinyxmlerror.o \
+	${OBJECTDIR}/src/simulation/fields/TramStop.o
 
 
 # C Compiler Flags
@@ -79,16 +79,6 @@ LDLIBSOPTIONS=
 dist/Release/GNU-Linux-x86/tramsimulation: ${OBJECTFILES}
 	${MKDIR} -p dist/Release/GNU-Linux-x86
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tramsimulation ${OBJECTFILES} ${LDLIBSOPTIONS} 
-
-${OBJECTDIR}/src/simulation/entities/TramStop.o: src/simulation/entities/TramStop.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/TramStop.o src/simulation/entities/TramStop.cpp
-
-${OBJECTDIR}/src/simulation/Field.o: src/simulation/Field.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/simulation
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Field.o src/simulation/Field.cpp
 
 ${OBJECTDIR}/src/app/View.o: src/app/View.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/app
@@ -124,6 +114,11 @@ ${OBJECTDIR}/src/simulation/Board.o: src/simulation/Board.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/simulation
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/Board.o src/simulation/Board.cpp
+
+${OBJECTDIR}/src/simulation/fields/Field.o: src/simulation/fields/Field.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/fields
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/fields/Field.o src/simulation/fields/Field.cpp
 
 ${OBJECTDIR}/src/tinyxml/tinyxml.o: src/tinyxml/tinyxml.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
@@ -184,6 +179,11 @@ ${OBJECTDIR}/src/tinyxml/tinyxmlerror.o: src/tinyxml/tinyxmlerror.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/tinyxmlerror.o src/tinyxml/tinyxmlerror.cpp
+
+${OBJECTDIR}/src/simulation/fields/TramStop.o: src/simulation/fields/TramStop.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/simulation/fields
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/fields/TramStop.o src/simulation/fields/TramStop.cpp
 
 # Subprojects
 .build-subprojects:

@@ -7,7 +7,8 @@
 
 #include "Simulation.h"
 
-Simulation::Simulation() {
+Simulation::Simulation(std::string schedule, std::string infrastructure) : board(infrastructure), scheduleFile(schedule.c_str()) {
+  
 }
 
 Simulation::Simulation(const Simulation& orig) {

@@ -104,6 +104,24 @@ SDL_Rect Surface::getCrop() const {
   return this->crop;
 }
 
+void Surface::RMBPressed(Uint16 x, Uint16 y) {
+}
+
+void Surface::RMBReleased(Uint16 x, Uint16 y) {
+}
+
+void Surface::MMBPressed(Uint16 x, Uint16 y) {
+}
+
+void Surface::MMBReleased(Uint16 x, Uint16 y) {
+}
+
+void Surface::LMBPressed(Uint16 x, Uint16 y) {
+}
+
+void Surface::LMBReleased(Uint16 x, Uint16 y) {
+}
+
 Surface Surface::createDisplay(int x, int y, int bpp, Uint32 flags) {
   SDL_Surface * display = SDL_SetVideoMode(x, y, bpp, flags);
   if (display == NULL) {

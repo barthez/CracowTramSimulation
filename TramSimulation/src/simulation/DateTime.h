@@ -71,7 +71,6 @@ namespace Sim {
 
     const string & dayOfWeek() const;
 
-    operator Time() const;
     virtual operator string() const;
     DateTime operator+(const DateTimeSpan & st);
     DateTime & operator +=(const DateTimeSpan & dt);

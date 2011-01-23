@@ -28,6 +28,15 @@ public:
   bool addSurface(Surface * s, int x = -1, int y = -1);
   bool removeSurface(Surface * s);
 
+  virtual void RMBPressed(Uint16 x, Uint16 y);
+  virtual void RMBReleased(Uint16 x, Uint16 y);
+
+  virtual void MMBPressed(Uint16 x, Uint16 y);
+  virtual void MMBReleased(Uint16 x, Uint16 y);
+
+  virtual void LMBPressed(Uint16 x, Uint16 y);
+  virtual void LMBReleased(Uint16 x, Uint16 y);
+
 private:
   Surface * display;
   Surface * background;

@@ -59,7 +59,8 @@ void Application::onEvent(SDL_Event * Event) {
 
 void Application::Loop() {
   //Do some modifications
-  view.scrollAtScreenBorder(20, 5);
+  if (running == AS_SIMULATION)
+    view.scrollAtScreenBorder(20, 5);
 
 
   if ((TIME_FPS + 1000) < SDL_GetTicks()) {
@@ -86,6 +87,7 @@ void Application::Render() {
 
 int Application::Execute() {
   Uint32 execTime = SDL_GetTicks();
+  running = AS_SIMULATION;
   while (running) {
     //    execTime = SDL_GetTicks() - execTime;
     //    std::cout << "Render time " << execTime << "ms\n";
@@ -113,7 +115,7 @@ void Application::QuitEv() {
 }
 
 void Application::LMBPressed(Uint16 x, Uint16 y) {
-
+  view.LMBPressed(x, y);
 }
 
 void Application::KeyPressed(SDLKey sym, SDLMod mod, Uint16 unicode) {
@@ -134,6 +136,7 @@ void Application::KeyReleased(SDLKey sym, SDLMod mod, Uint16 unicode) {
 void Application::MouseMove(Uint16 x, Uint16 y, Sint16 xrel, Sint16 yrel, bool right, bool middle, bool left) {
 
 }
+
 
 void Application::Clean() {
   delete fps;

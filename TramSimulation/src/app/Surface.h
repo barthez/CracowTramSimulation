@@ -36,6 +36,15 @@ public:
   SDL_Rect getOffset() const;
   SDL_Rect getCrop() const;
 
+  virtual void RMBPressed(Uint16 x, Uint16 y);
+  virtual void RMBReleased(Uint16 x, Uint16 y);
+
+  virtual void MMBPressed(Uint16 x, Uint16 y);
+  virtual void MMBReleased(Uint16 x, Uint16 y);
+
+  virtual void LMBPressed(Uint16 x, Uint16 y);
+  virtual void LMBReleased(Uint16 x, Uint16 y);
+
   static Surface createDisplay(int x, int y, int bpp, Uint32 flags);
   static Surface loadBMP(const char * filename, int r = 255, int g = 0, int b = 255);
   static Surface loadIMG(const char * filename);
