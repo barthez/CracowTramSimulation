@@ -3,8 +3,6 @@
 import math
 import sys
 import xml.dom.minidom
-from xml.dom.minidom import Document
-from xml.etree.ElementTree import Element
 
 import urllib.error
 import urllib.request
@@ -56,10 +54,12 @@ def main(argv):
             minE = gg;
 
   for name, info in przystanki.items():
-    xx = [a for a, _ in przystanki[name]["location"]];
-    yy = [b for _, b in przystanki[name]["location"]];
+    xx = [a for a, b in przystanki[name]["location"]];
+    yy = [b for b, b in przystanki[name]["location"]];
     przystanki[name]["mean_location"] = (sum(xx) / len(xx), sum(yy) / len(yy))
     przystanki[name]["locations_number"] = len(przystanki[name]["location"])
+
+  connections = [];
 
   for line in lineNum:
     rozklad = xml.dom.minidom.parse("rozklady/rozklad{}.xml".format(line))
@@ -67,15 +67,28 @@ def main(argv):
       next = p.nextSibling.nextSibling;
       prev = p.previousSibling.previousSibling;
       name = p.getAttribute("name")
+      if not "directions" in przystanki[name]:
+        przystanki[name]["directions"] = []
       if not "stops" in przystanki[name]:
-        przystanki[name]["stops"] = { "from" : [], "to" : []}
-      if next != None:
-        nextName = next.getAttribute("name")
-        if not nextName in przystanki[name]["stops"]["to"]:
-          przystanki[name]["stops"]["to"].append( nextName )
-        #print("   Kolejny : {}".format(nextName))
-      else:
+        przystanki[name]["stops"] = { "from" : [], "to" : [] }
+
+      if next == None:
         next = p.parentNode.firstChild.nextSibling
+      if prev == None:
+        prev = p.parentNode.lastChild.previousSibling
+
+      nextName = next.getAttribute("name")
+      prevName = prev.getAttribute("name")
+
+      pair = (prevName, nextName)
+      if not pair in przystanki[name]["directions"]:
+        przystanki[name]["directions"].append( pair )
+
+      conn = (name, nextName)
+      if not conn in connections:
+        connections.append( conn )
+
+      if next != None:
         nextName = next.getAttribute("name")
         if not nextName in przystanki[name]["stops"]["to"]:
           przystanki[name]["stops"]["to"].append( nextName )
@@ -84,7 +97,6 @@ def main(argv):
         prevName = prev.getAttribute("name")
         if not prevName in przystanki[name]["stops"]["from"]:
           przystanki[name]["stops"]["from"].append( prevName )
-        #print("   Poprzedni: {}".format(prevName))
 
   minTT = minN;
   minGG = minE;
@@ -106,35 +118,57 @@ def main(argv):
   print(len(przystanki))
   # @type doc Document
   doc = xml.dom.minidom.Document();
-  root = doc.createElement("mapa")
-  przyElem = doc.createElement('Przystanki')
+  root = doc.createElement("TramMap")
+  przyElem = doc.createElement('TramStops')
   for przys, info in przystanki.items():
-    print("Przystanek: {}".format(przys));
-    print("    from: {}".format( przystanki[przys]["stops"]["from"]))
-    print("    to: {}".format( przystanki[przys]["stops"]["to"]))
-    print("    MeanLoc: {}/{}".format( przystanki[przys]["mean_location"], przystanki[name]["location"] ) )
-    pElem = doc.createElement("Przystanek")
+    #print("Przystanek: {}".format(przys));
+    #print("    info: {}".format( info["directions"] ))
+    #print("    info: {}".format( info["locations_number"] ))
+#    print("    to: {}".format( przystanki[przys]["stops"]["to"]))
+#    print("    MeanLoc: {}/{}".format( przystanki[przys]["mean_location"], przystanki[przys]["location"] ) )
+    pElem = doc.createElement("TramStop")
     pElem.setAttribute("name", przys)
+    pElem.setAttribute("locations", str(info["locations_number"]))
     #początek lokalizacji
     locElem = doc.createElement("location")
     (n, e) = info["mean_location"]
-    xElem = doc.createElement("x")
-    xElem.appendChild(doc.createTextNode(str(n)))
-    yElem = doc.createElement("y")
-    yElem.appendChild(doc.createTextNode(str(e)))
-    locElem.appendChild(xElem)
-    locElem.appendChild(yElem)
+    locElem.setAttribute("x", str(n))
+    locElem.setAttribute("y", str(e))
     pElem.appendChild(locElem)
     #koniec lokalizacji
 
     #poczatek przystanków z i do
+    prevElem = doc.createElement("PrevStops")
+    for s in info["stops"]["from"]:
+      prevStopElem = doc.createElement("Stop")
+      prevStopElem.appendChild( doc.createTextNode(s))
+      prevElem.appendChild(prevStopElem)
+
+    nextElem = doc.createElement("NextStops")
+    for s in info["stops"]["to"]:
+      nextStopElem = doc.createElement("Stop")
+      nextStopElem.appendChild( doc.createTextNode(s))
+      nextElem.appendChild(nextStopElem)
+
+    pElem.appendChild(prevElem)
+    pElem.appendChild(nextElem)
 
     przyElem.appendChild(pElem)
   sizeElem = doc.createElement("size")
   sizeElem.setAttribute("x", str(x))
   sizeElem.setAttribute("y", str(y))
+
+  connElem = doc.createElement("Connections")
+  connElem.setAttribute("connections", str(len(connections)))
+  for _from, _to in connections:
+    cElem = doc.createElement("Connect")
+    cElem.setAttribute("from", _from)
+    cElem.setAttribute("to", _to)
+    connElem.appendChild(cElem)
+
   root.appendChild(sizeElem)
   root.appendChild(przyElem)
+  root.appendChild(connElem)
   doc.appendChild(root)
 
   file = open("przystanki.xml", "w")

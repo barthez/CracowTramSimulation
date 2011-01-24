@@ -7,12 +7,15 @@
 
 #include "TramStop.h"
 
-TramStop::TramStop(std::string name) : Field(name) {
+TramStop::TramStop(int x, int y, std::string name) : Field(x, y, name) {
 }
 
-TramStop::TramStop(const TramStop& orig) {
+TramStop::TramStop(const TramStop& orig) : Field(orig) {
 }
 
 TramStop::~TramStop() {
 }
 
+Uint32 TramStop::getColor(const SDL_PixelFormat * format) const {
+  return SDL_MapRGB(format, 0x11, 0x11, 0xff);
+}

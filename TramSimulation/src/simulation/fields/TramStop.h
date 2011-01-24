@@ -9,13 +9,14 @@
 #define	TRAMSTOP_H
 
 #include "Field.h"
-#include <string>
 
 class TramStop : public Field {
 public:
-  TramStop(std::string name = "");
+  TramStop(int x, int y, std::string name = "");
   TramStop(const TramStop& orig);
   virtual ~TramStop();
+
+  virtual Uint32 getColor(const SDL_PixelFormat * format) const;
 private:
   int i;
 

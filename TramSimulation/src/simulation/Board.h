@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <map>
 #include <memory>
 #include <SDL/SDL_gfxPrimitives.h>
