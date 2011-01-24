@@ -8,7 +8,7 @@
 
 #include "Board.h"
 
-Board::Board(std::string filename) : doc(filename.c_str()) {
+Board::Board(String filename) : doc(filename.c_str()) {
   std::cout << "Init board\n";
   Init();
 }
@@ -31,7 +31,7 @@ void Board::Init() {
   root->FirstChildElement("size")->Attribute("y", &y);
   board = FieldMatrix(x + 1, FieldVector(y + 1, NULL));
 
-  Surface::Init(SDL_CreateRGBSurface(SDL_SWSURFACE, 20 + FACTOR*x, 20 + FACTOR*y, 32, 0xff000000, 0x00ff0000, 0x0000ff00, 0x000000ff));
+  Surface::Init(SDL_CreateRGBSurface(SDL_SWSURFACE, 40 + FACTOR*x, 40 + FACTOR*y, 32, 0xff000000, 0x00ff0000, 0x0000ff00, 0x000000ff));
 
   SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 0x26, 0x99, 0x26));
   TiXmlElement *stop, *loc, *conn = NULL;
@@ -39,9 +39,9 @@ void Board::Init() {
   stop = root->FirstChildElement("TramStops")->FirstChildElement();
 
   for (stop; stop; stop = stop->NextSiblingElement()) {
-    std::string name = stop->Attribute("name");
+    String name = String(stop->Attribute("name"));
     stop->Attribute("locations", &locations);
-    
+
     loc = stop->FirstChildElement("location");
     loc->Attribute("x", &x);
     loc->Attribute("y", &y);
@@ -55,48 +55,81 @@ void Board::Init() {
   }
 
   conn = root->FirstChildElement("Connections")->FirstChildElement("Connect");
-  for(conn; conn; conn = conn->NextSiblingElement()) {
+  for (conn; conn; conn = conn->NextSiblingElement()) {
     int xa, xb, ya, yb, dx, dy, i, j;
-    std::string fromname, toname;
-    fromname = conn->Attribute("from");
-    toname = conn->Attribute("to");
+    String fromname, toname;
+    Field * prev = NULL;
+    Field * current = NULL;
+    fromname = String(conn->Attribute("from"));
+    toname = String(conn->Attribute("to"));
     xa = this->tramStops[fromname]->getX();
     ya = this->tramStops[fromname]->getY();
     xb = this->tramStops[toname]->getX();
     yb = this->tramStops[toname]->getY();
     dx = abs(xa - xb);
     dy = abs(ya - yb);
+
     if (dx > dy) {
-      if (xa > xb) {
-        std::swap(xa, xb);
-        std::swap(ya, yb);
+      if (xa < xb) {
+        for (i = xa; i <= xb; i++) {
+
+          if (xb != xa) j = (yb - ya)*(i - xa) / (xb - xa) + ya;
+          else j = ya;
+          prev = addField(i, j, toname, prev);
+        }
+      } else {
+
+        for (i = xa; i >= xb; i--) {
+
+          if (xb != xa) j = (yb - ya)*(i - xa) / (xb - xa) + ya;
+          else j = ya;
+          prev = addField(i, j, toname, prev);
+        }
       }
-      for (i = xa; i <= xb; i++ ) {
-        if ( xb != xa ) j = (yb - ya)*(i - xa)/(xb - xa) + ya;
-        else j = xa;
-        if (this->board[i][j] == NULL)
-          this->board[i][j] = new Field(i, j, "Trasasasa");
-        SDL_FillRect(surf, this->board[i][j]->getRect(), this->board[i][j] ->getColor(surf->format));
-      }
+
     } else {
-      if (ya > yb) {
-        std::swap(xa, xb);
-        std::swap(ya, yb);
+      if (ya < yb) {
+        for (j = ya; j <= yb; j++) {
+
+          if (yb != ya) i = (xb - xa)*(j - ya) / (yb - ya) + xa;
+          else i = xa;
+          prev = addField(i, j, toname, prev);
+        }
+      } else {
+        for (j = ya; j >= yb; j--) {
+
+          if (yb != ya) i = (xb - xa)*(j - ya) / (yb - ya) + xa;
+          else i = xa;
+          prev = addField(i, j, toname, prev);
+        }
       }
-      for (j = ya; j <= yb; j++ ) {
-        if (yb != ya) i = (xb - xa)*(j - ya)/(yb - ya) + xa;
-        else i = ya;
-        if (this->board[i][j] == NULL)
-          this->board[i][j] = new Field(i, j, "Trasasasa");
-        SDL_FillRect(surf, this->board[i][j]->getRect(), this->board[i][j] ->getColor(surf->format));
-      }
+
     }
+    prev = current = NULL;
 
   }
 
 
- //SDL_SaveBMP(surf, "mapa.bmp");
+  //SDL_SaveBMP(surf, "mapa.bmp");
 
+}
+
+Field * Board::addField(int x, int y, String & to, Field * prev) {
+  Field * current = NULL;
+  if (this->board[x][y] == NULL) {
+    current = new Field(x, y, String("Trasasasa"));
+    this->board[x][y] = current;
+    SDL_FillRect(surf, current->getRect(), current->getColor(surf->format));
+  } else {
+    current = this->board[x][y];
+  }
+
+
+
+  if (prev != NULL)
+    prev->addDirection(to, current);
+
+  return current;
 }
 
 void Board::LMBPressed(Uint16 x, Uint16 y) {
@@ -105,6 +138,6 @@ void Board::LMBPressed(Uint16 x, Uint16 y) {
   y = (y - 21) / FACTOR;
 
   if (board[x][y] != NULL) {
-    std::cout << "Przystanek na pozycji " << x << ", " << y << ": " << board[x][y]->getName() << std::endl;
+    std::cout << board[x][y]->toString() << std::endl;
   }
 }

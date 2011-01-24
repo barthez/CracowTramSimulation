@@ -7,7 +7,7 @@
 
 #include "TramStop.h"
 
-TramStop::TramStop(int x, int y, std::string name) : Field(x, y, name) {
+TramStop::TramStop(int x, int y, String name) : Field(x, y, name) {
 }
 
 TramStop::TramStop(const TramStop& orig) : Field(orig) {

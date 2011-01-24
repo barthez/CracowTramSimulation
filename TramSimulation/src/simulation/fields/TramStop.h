@@ -12,7 +12,7 @@
 
 class TramStop : public Field {
 public:
-  TramStop(int x, int y, std::string name = "");
+  TramStop(int x, int y, String name = "");
   TramStop(const TramStop& orig);
   virtual ~TramStop();
 

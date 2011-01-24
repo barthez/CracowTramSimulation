@@ -8,6 +8,8 @@
 #ifndef BOARD_H
 #define	BOARD_H
 
+
+#include "fields/Field.h"
 #include "../app/Surface.h"
 #include <string>
 
@@ -19,7 +21,6 @@
 #include <SDL/SDL_gfxPrimitives.h>
 #include "../tinyxml/tinyxml.h"
 #include "../app/Exceptions.h"
-#include "fields/Field.h"
 #include "fields/TramStop.h"
 
 
@@ -27,11 +28,11 @@
 typedef std::auto_ptr<Field> pField;
 typedef std::vector< Field* > FieldVector;
 typedef std::vector< FieldVector > FieldMatrix;
-typedef std::map<std::string, TramStop* > StopMap;
+typedef std::map<String, TramStop* > StopMap;
 
 class Board : public Surface {
 public:
-    Board(std::string filename = "");
+    Board(String filename = String() );
     Board(const Board& orig);
     virtual ~Board();
 
@@ -43,6 +44,8 @@ private:
   TiXmlDocument doc;
   FieldMatrix board;
   StopMap tramStops;
+
+  Field * addField(int x, int y, String & to, Field * prev);
 
 };
 

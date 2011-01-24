@@ -12,35 +12,44 @@
 #define SPEED 50
 
 
+#include <ios>
+#include <iostream>
+#include <sstream>
+#include <utility>
 #include <string>
 #include <map>
 #include <SDL/SDL.h>
 
 class Field;
 
-typedef std::map<std::string, Field*> Directions;
+typedef std::string String;
+typedef std::map< String, Field* > Directions;
+typedef std::pair< String, Field* > DirPair;
+typedef std::map< String, Field* >::iterator DirIT;
+typedef std::map< String, Field* >::const_iterator CDirIT;
 
 class Field {
 public:
-    Field(int x, int y, std::string name = "Puste pole");
-    Field(const Field& orig);
-    virtual ~Field();
+  Field(int x, int y, String name = String("Puste pole"));
+  Field(const Field& orig);
+  virtual ~Field();
 
-    int getX() const;
-    int getY() const;
+  int getX() const;
+  int getY() const;
 
-    void addDirection(std::string stopname, Field * f);
+  void addDirection(String & stopname, Field * f);
 
-    virtual const std::string & getName() const;
-    virtual Uint32  getColor(const SDL_PixelFormat * format) const;
-    SDL_Rect * getRect();
-    
+  virtual String toString() const;
+  virtual const String & getName() const;
+  virtual Uint32 getColor(const SDL_PixelFormat * format) const;
+  SDL_Rect * getRect();
+
 private:
-  std::string name;
+  String name;
   int x, y;
   SDL_Rect rect;
   int speed;
-  Directions dir;
+  std::map< String, Field* > directs;
 };
 
 #endif	/* FIELD_H */

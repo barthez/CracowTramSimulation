@@ -7,7 +7,7 @@
 
 #include "Field.h"
 
-Field::Field(int x, int y, std::string name) {
+Field::Field(int x, int y, String name) {
   this->name = name;
   this->x = x;
   this->y = y;
@@ -24,7 +24,7 @@ Field::Field(const Field& orig) {
 Field::~Field() {
 }
 
-const std::string & Field::getName() const {
+const String & Field::getName() const {
   return this->name;
 }
 
@@ -36,8 +36,9 @@ SDL_Rect * Field::getRect() {
   return &rect;
 }
 
-void Field::addDirection(std::string stopname, Field* f) {
-  dir[stopname] = f;
+void Field::addDirection(String & stopname, Field* f) {
+  
+  this->directs[stopname] = f;
 }
 
 int Field::getX() const {
@@ -46,4 +47,14 @@ int Field::getX() const {
 
 int Field::getY() const {
   return this->y;
+}
+
+String Field::toString() const {
+  std::stringstream ss(std::ios::out);
+  ss << "Pole '" << this->name << "'\n";
+  ss << "Prowadzi do:\n";
+  for (CDirIT it = directs.begin(); it != directs.end(); ++it) {
+    ss << "\t" << it->first << "\n";
+  }
+  return ss.str();
 }
