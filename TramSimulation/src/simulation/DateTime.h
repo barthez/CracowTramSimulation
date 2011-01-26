@@ -22,8 +22,6 @@ namespace Sim {
     TimeSpan(int min = 0, int hour = 0);
     virtual ~TimeSpan();
 
-    virtual void adjust(int min, int hour = 0);
-
     int getMinute() const;
     int getHour() const;
   protected:
@@ -36,7 +34,6 @@ namespace Sim {
     DateTimeSpan(const TimeSpan & dt, int day = 0, int week = 0);
     virtual ~DateTimeSpan();
 
-    void adjust(int min, int hour = 0, int day = 0, int week = 0);
 
     int getDay() const;
     int getWeek() const;
@@ -49,15 +46,19 @@ namespace Sim {
     Time(int min = 0, int hour = 0);
     virtual ~Time();
 
+
+
+    virtual void adjust(int min, int hour = 0);
+
     virtual operator string() const;
     Time operator+(const TimeSpan & st);
     Time & operator +=(const TimeSpan & dt);
-    virtual bool operator==(const Time & t);
-    virtual bool operator>(const Time & t);
-    virtual bool operator>=(const Time & t);
-    virtual bool operator<(const Time & t);
-    virtual bool operator<=(const Time & t);
-  private:
+    virtual bool operator==(const Time & t) const;
+    virtual bool operator>(const Time & t) const;
+    virtual bool operator>=(const Time & t) const;
+    virtual bool operator<(const Time & t) const;
+    virtual bool operator<=(const Time & t) const;
+  protected:
     int min, hour;
   };
 
@@ -70,15 +71,16 @@ namespace Sim {
     virtual ~DateTime();
 
     const string & dayOfWeek() const;
+    void adjust(int min, int hour = 0, int day = 0, int week = 0);
 
     virtual operator string() const;
     DateTime operator+(const DateTimeSpan & st);
     DateTime & operator +=(const DateTimeSpan & dt);
-    virtual bool operator==(const DateTime & t);
-    virtual bool operator>(const DateTime & t);
-    virtual bool operator>=(const DateTime & t);
-    virtual bool operator<(const DateTime & t);
-    virtual bool operator<=(const DateTime & t);
+    virtual bool operator==(const DateTime & t) const;
+    virtual bool operator>(const DateTime & t) const;
+    virtual bool operator>=(const DateTime & t) const;
+    virtual bool operator<(const DateTime & t) const;
+    virtual bool operator<=(const DateTime & t) const;
 
 
   private:

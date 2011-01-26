@@ -16,7 +16,7 @@ public:
     Vehicle();
     Vehicle(const Vehicle& orig);
     virtual ~Vehicle();
-private:
+
 
 };
 

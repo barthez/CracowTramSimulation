@@ -37,7 +37,7 @@ SDL_Rect * Field::getRect() {
 }
 
 void Field::addDirection(String & stopname, Field* f) {
-  
+
   this->directs[stopname] = f;
 }
 
@@ -57,4 +57,26 @@ String Field::toString() const {
     ss << "\t" << it->first << "\n";
   }
   return ss.str();
+}
+
+void Field::update(const DateTime & time) {
+  std::map< String, Field* >::iterator it;
+  for(it = this->directs.begin(); it != this->directs.end(); ++ it) {
+    if (trams.count(it->first) > 0) {
+      it->second->insertTramLater(trams[it->first], speed/10);
+    }
+  }
+}
+
+void Field::nextState() {
+  trams = nextTrams;
+}
+
+void Field::insertTram(Tram* tram) {
+  trams[tram->nextStop()] = tram;
+  tram->setPosition(x, y);
+}
+
+void Field::insertTramLater(Tram* tram, int dist) {
+  
 }

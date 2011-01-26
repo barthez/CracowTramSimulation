@@ -75,6 +75,7 @@ bool Surface::draw(const Surface & s) {
     return false;
   }
 
+  //std::cout << "Draw surf at: " << this->offset.x << " " << this->offset.y  << "\n";
   if (SDL_BlitSurface(this->surf, &this->crop, s.surf, &this->offset) < 0)
     throw SDLException("Nie można wyrysować powieszchni");
   return true;
@@ -194,55 +195,48 @@ bool DisplaySurface::close() {
   return false;
 }
 
-void TextSurface::Init(const char* t, int style, int r, int g, int b) {
+void TextSurface::Init(const String & t, int style, int r, int g, int b) {
   this->style = style;
   this->color.r = r;
   this->color.g = g;
   this->color.b = b;
 
-  this->text = new char[strlen(t) + 1];
-  strcpy(this->text, t);
+  this->text = t;
 
-  Surface::Init(font.renderText(this->text, style, &color));
+
+  surf = font.renderText(this->text.c_str(), this->style, &this->color);
+
+  this->setCrop(0, 0, surf->w, surf->h);
 }
 
-void TextSurface::Clean() {
-  Surface::Clean();
-  if (this->text != NULL) {
-    delete [] this->text;
-    this->text = NULL;
-  }
-}
-
-TextSurface::TextSurface(const char* text, const char* fontfile, int size, int style, int r, int g, int b) : font(fontfile, size) {
+TextSurface::TextSurface(const String text, const String fontfile, int size, int style, int r, int g, int b) : Surface(), font(fontfile.c_str(), size) {
   Init(text, style, r, g, b);
 }
 
-TextSurface::TextSurface(const TextSurface& s) : font(s.font) {
+TextSurface::TextSurface(const TextSurface& s) : Surface(), font(s.font) {
   Init(s.text, s.style, s.color.r, s.color.g, s.color.b);
+  setOffset(s.offset.x, s.offset.y);
+  setCrop(s.crop.x, s.crop.y, s.crop.w, s.crop.h);
 }
 
 TextSurface & TextSurface::operator =(const TextSurface& s) {
   if (this == &s) return *this;
 
-  Clean();
+  Surface::Clean();
   this->font = font;
   Init(s.text, s.style, s.color.r, s.color.g, s.color.b);
+  this->setOffset(s.offset.x, s.offset.x);
+  this->setCrop(s.crop.x, s.crop.y, s.crop.w, s.crop.h);
   return *this;
 }
 
 TextSurface::~TextSurface() {
-  Clean();
+
 }
 
-void TextSurface::setText(const char * t) {
-  if (t == this->text) {
-    Surface::Clean();
-    Surface::Init(font.renderText(t, style, &color));
-  } else {
-    Clean();
-    Init(t, this->style, this->color.r, this->color.g, this->color.b);
-  }
+void TextSurface::setText(const String t) {
+  Surface::Clean();
+  Init(t, this->style, this->color.r, this->color.g, this->color.b);
 }
 
 void TextSurface::setSize(int size) {

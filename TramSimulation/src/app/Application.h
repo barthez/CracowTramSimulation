@@ -14,7 +14,7 @@
 #include "Exceptions.h"
 #include "Surface.h"
 #include "View.h"
-#include "../simulation/Board.h"
+#include "../simulation/Simulation.h"
 
 using std::cout;
 using std::cin;
@@ -36,7 +36,7 @@ private:
     enum { AS_QUIT = 0, AS_MENU, AS_SIMULATION };
     int running;
     DisplaySurface display;
-    Board board;
+    Simulation sim;
     Surface image;
     TextSurface * fps;
     View view;

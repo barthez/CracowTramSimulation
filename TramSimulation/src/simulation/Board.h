@@ -22,8 +22,9 @@
 #include "../tinyxml/tinyxml.h"
 #include "../app/Exceptions.h"
 #include "fields/TramStop.h"
+#include "DateTime.h"
 
-
+using Sim::DateTime;
 
 typedef std::auto_ptr<Field> pField;
 typedef std::vector< Field* > FieldVector;
@@ -35,6 +36,11 @@ public:
     Board(String filename = String() );
     Board(const Board& orig);
     virtual ~Board();
+
+    void update(const DateTime & time);
+    void insertTram(Tram * t);
+
+    virtual bool draw(const Surface &s);
 
     virtual void LMBPressed(Uint16 x, Uint16 y);
 

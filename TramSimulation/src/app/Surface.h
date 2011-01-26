@@ -16,6 +16,9 @@
 #include "Font.h"
 
 #include <iostream>
+#include <string>
+
+typedef std::string String;
 
 class Surface {
 public:
@@ -74,19 +77,18 @@ private:
 
 class TextSurface : public Surface {
 public:
-  TextSurface(const char * text, const char * fontfile, int size, int style = TTF_STYLE_NORMAL, int r=0, int g =0, int b =0);
+  TextSurface(const String text, const String fontfile, int size, int style = TTF_STYLE_NORMAL, int r=0, int g =0, int b =0);
   TextSurface(const TextSurface & s);
   TextSurface & operator=(const TextSurface & s);
   virtual ~TextSurface();
   
-  void setText(const char * text);
+  void setText(const String text);
   void setSize(int size);
 protected:
-  virtual void Init(const char* text, int style, int r, int g, int b);
-  virtual void Clean();
+  virtual void Init(const String & text, int style, int r, int g, int b);
 private:
   Font font;
-  char * text;
+  String text;
   int style;
   SDL_Color color;
 

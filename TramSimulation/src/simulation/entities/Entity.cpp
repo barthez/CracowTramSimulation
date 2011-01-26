@@ -16,3 +16,7 @@ Entity::Entity(const Entity& orig) {
 Entity::~Entity() {
 }
 
+void Entity::setPosition(int x, int y) {
+  this->x = x;
+  this->y = y;
+}

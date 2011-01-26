@@ -10,23 +10,31 @@
 
 #include "DateTime.h"
 #include "Board.h"
+#include "../app/Surface.h"
 #include "entities/Vehicle.h"
 #include <vector>
+#include <map>
+
+using Sim::DateTime;
 
 typedef std::vector<Vehicle*> VehiclesVector;
 
 class Simulation {
 public:
-  Simulation(std::string schedule, std::string infrastructure);
+  Simulation(std::vector < std::string > schedules, std::string infrastructure);
   Simulation(const Simulation& orig);
   virtual ~Simulation();
 
+  Simulation * operator= (const Simulation & s);
+
   void update();
+  Board * getBoard();
+  Surface * getTimeSurface();
 private:
   Board board;
-  TiXmlDocument scheduleFile;
   VehiclesVector vehicles;
-  Sim::DateTime simTime;
+  DateTime simTime;
+  TextSurface timeSurf;
   
   
 

@@ -199,6 +199,7 @@
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread</linkerOptionItem>
+            <linkerOptionItem>-fopenmp</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

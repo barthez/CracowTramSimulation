@@ -29,7 +29,7 @@ void Board::Init() {
   TiXmlElement * root = doc.RootElement();
   root->FirstChildElement("size")->Attribute("x", &x);
   root->FirstChildElement("size")->Attribute("y", &y);
-  board = FieldMatrix(x + 1, FieldVector(y + 1, NULL));
+  board = FieldMatrix(x + 1, FieldVector(y + 1, (Field *) NULL));
 
   Surface::Init(SDL_CreateRGBSurface(SDL_SWSURFACE, 40 + FACTOR*x, 40 + FACTOR*y, 32, 0xff000000, 0x00ff0000, 0x0000ff00, 0x000000ff));
 
@@ -114,6 +114,11 @@ void Board::Init() {
 
 }
 
+bool Board::draw(const Surface& s) {
+  //TODO rysuj tramwaje
+  return Surface::draw(s);
+}
+
 Field * Board::addField(int x, int y, String & to, Field * prev) {
   Field * current = NULL;
   if (this->board[x][y] == NULL) {
@@ -130,6 +135,32 @@ Field * Board::addField(int x, int y, String & to, Field * prev) {
     prev->addDirection(to, current);
 
   return current;
+}
+
+void Board::update(const DateTime & time) {
+//  Uint32 t = SDL_GetTicks();
+  int i, j;
+
+  for (i = 0; i < board.size(); ++i) {
+    for (j = 0; j < board[i].size(); ++j) {
+      if (board[i][j] == NULL) continue;
+      board[i][j]->update(time);
+    }
+  }
+
+
+  for (i = 0; i < board.size(); ++i) {
+    for (j = 0; j < board[i].size(); ++j) {
+      if (board[i][j] == NULL) continue;
+      board[i][j]->nextState();
+    }
+  }
+
+//  std::cout << "Update time: " << SDL_GetTicks() - t << "ms\n";
+}
+
+void Board::insertTram(Tram * t) {
+  tramStops[t->nextStop()]->insertTram(t);
 }
 
 void Board::LMBPressed(Uint16 x, Uint16 y) {

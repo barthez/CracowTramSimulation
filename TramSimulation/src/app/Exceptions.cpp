@@ -12,7 +12,7 @@ ApplicationException::ApplicationException(const string & s) throw() : std::exce
   this->msg = s;
 }
 
-const char * ApplicationException::what() throw(){
+const char * ApplicationException::what() const throw(){
   return msg.c_str();
 }
 
@@ -20,7 +20,11 @@ SDLException::SDLException(const string & m)  throw() : ApplicationException(m) 
 
 }
 
-TTFException::TTFException(const string & m) throw() : SDLException(m) {
+const char * SDLException::what() const throw(){
+  return ApplicationException::what();
+}
+
+TTFException::TTFException(const string & m)  throw() : SDLException(m) {
 
 }
 

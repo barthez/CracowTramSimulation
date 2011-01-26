@@ -19,8 +19,15 @@
 #include <string>
 #include <map>
 #include <SDL/SDL.h>
+#include "../DateTime.h"
+#include "../entities/Entity.h"
+#include "../entities/Tram.h"
+
 
 class Field;
+class Tram;
+
+using Sim::DateTime;
 
 typedef std::string String;
 typedef std::map< String, Field* > Directions;
@@ -37,6 +44,12 @@ public:
   int getX() const;
   int getY() const;
 
+  void insertTram(Tram * tram);
+  void insertTramLater(Tram * tram, int dist);
+
+  virtual void update(const DateTime & time);
+  virtual void nextState();
+
   void addDirection(String & stopname, Field * f);
 
   virtual String toString() const;
@@ -50,6 +63,7 @@ private:
   SDL_Rect rect;
   int speed;
   std::map< String, Field* > directs;
+  std::map< String, Tram* > trams, nextTrams;
 };
 
 #endif	/* FIELD_H */

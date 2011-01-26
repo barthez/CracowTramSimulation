@@ -12,7 +12,10 @@
 
 #include "Application.h"
 
-Application::Application(int x, int y, int bpp, const char * title) : board("przystanki.xml") {
+std::string linie[] = { "linia12.xml" };
+
+
+Application::Application(int x, int y, int bpp, const char * title) : sim(std::vector<std::string>(linie, linie+1), "przystanki.xml") {
   this->Init(x, y, bpp, title);
 }
 
@@ -39,7 +42,7 @@ bool Application::Init(int x, int y, int bpp, const char * title) {
 
   }
 
-  view = View(&this->display, &this->board);
+  view = View(&this->display, this->sim.getBoard());
 
 
   //  SDL_EnableKeyRepeat(10, SDL_DEFAULT_REPEAT_INTERVAL / 3);
@@ -59,8 +62,10 @@ void Application::onEvent(SDL_Event * Event) {
 
 void Application::Loop() {
   //Do some modifications
-  if (running == AS_SIMULATION)
+  if (running == AS_SIMULATION) {
+    sim.update();
     view.scrollAtScreenBorder(20, 5);
+  }
 
 
   if ((TIME_FPS + 1000) < SDL_GetTicks()) {
@@ -80,8 +85,9 @@ void Application::Render() {
 
   view.draw();
 
-  if (showFPS) fps->draw(display);
 
+  if (showFPS) fps->draw(display);
+  this->sim.getTimeSurface()->draw(display);
   display.flip();
 }
 
@@ -119,7 +125,7 @@ void Application::LMBPressed(Uint16 x, Uint16 y) {
 }
 
 void Application::KeyPressed(SDLKey sym, SDLMod mod, Uint16 unicode) {
-  switch(sym) {
+  switch (sym) {
     case SDLK_F1:
       showFPS = !showFPS;
       break;
@@ -136,7 +142,6 @@ void Application::KeyReleased(SDLKey sym, SDLMod mod, Uint16 unicode) {
 void Application::MouseMove(Uint16 x, Uint16 y, Sint16 xrel, Sint16 yrel, bool right, bool middle, bool left) {
 
 }
-
 
 void Application::Clean() {
   delete fps;

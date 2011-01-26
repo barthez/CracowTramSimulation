@@ -7,12 +7,22 @@
 
 #include "Tram.h"
 
-Tram::Tram() {
+Tram::Tram(int l, int s) :Vehicle() {
+  img = Surface::loadIMG("tram.png");
+  this->line =l;
+  this->squad = s;
 }
 
-Tram::Tram(const Tram& orig) {
+Tram::Tram(const Tram& orig) : Vehicle(orig) {
 }
 
 Tram::~Tram() {
 }
 
+const std::string & Tram::nextStop() const {
+  return this->ns;
+}
+
+void Tram::addSchedule(std::string day, std::map<Time, std::string> schedule) {
+  schedules[day] = schedule;
+}

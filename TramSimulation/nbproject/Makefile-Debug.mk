@@ -69,7 +69,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread
+LDLIBSOPTIONS=-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread -fopenmp
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}

@@ -18,7 +18,7 @@ public:
   ApplicationException(const string & msg = "Application Exception") throw();
   virtual ~ApplicationException() throw() {}
 
-  virtual const char * what() throw();
+  virtual const char * what() const throw();
 private:
   string msg;
 };
@@ -26,6 +26,8 @@ private:
 class SDLException : public ApplicationException {
 public:
   SDLException(const string & m = "SDL Exception") throw();
+
+  virtual const char * what() const throw();
 };
 
 class TTFException : public SDLException {
