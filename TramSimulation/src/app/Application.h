@@ -42,7 +42,7 @@ private:
     View view;
     Font * font;
     Uint32 TIME, TIME_FPS, FRAME_COUNT;
-    bool showFPS, showExecTime;
+    bool showFPS, showExecTime, startSim;
 
 protected:
     void onEvent(SDL_Event * Event);

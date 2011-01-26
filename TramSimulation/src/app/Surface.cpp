@@ -95,6 +95,16 @@ int Surface::getHeight() const {
   return this->surf->h;
 }
 
+int Surface::getOffsetX() const {
+  if (surf == NULL) throw SDLException("Powieszchnia nie istnieje");
+  return this->offset.x;
+}
+
+int Surface::getOffsetY() const {
+  if (surf == NULL) throw SDLException("Powieszchnia nie istnieje");
+  return this->offset.y;
+}
+
 SDL_Rect Surface::getOffset() const {
   if (surf == NULL) throw SDLException("Powieszchnia nie istnieje");
   return this->offset;
@@ -156,13 +166,15 @@ Surface Surface::loadIMG(const char * filename) {
   SDL_Surface *loadedImage, *image = NULL;
 
 
-  loadedImage = IMG_Load(filename);
+  image = IMG_Load(filename);
 
-  if (loadedImage == NULL)
+  if (image == NULL)
     throw SDLException("Nie mogę załadować obrazka");
-
-  image = SDL_DisplayFormat(loadedImage);
-  SDL_FreeSurface(loadedImage);
+//
+//  image = SDL_DisplayFormat(loadedImage);
+//  if (image == NULL)
+//    throw SDLException("Nie mogę załadować obrazka");
+//  SDL_FreeSurface(loadedImage);
   Surface s;
   s.Init(image);
 

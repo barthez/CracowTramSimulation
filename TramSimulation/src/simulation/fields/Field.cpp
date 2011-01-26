@@ -5,6 +5,8 @@
  * Created on 29 grudzień 2010, 20:38
  */
 
+#include <vector>
+
 #include "Field.h"
 
 Field::Field(int x, int y, String name) {
@@ -51,7 +53,7 @@ int Field::getY() const {
 
 String Field::toString() const {
   std::stringstream ss(std::ios::out);
-  ss << "Pole '" << this->name << "'\n";
+  ss << "Pole '" << this->name << "'" << x << "," << y << "\n";
   ss << "Prowadzi do:\n";
   for (CDirIT it = directs.begin(); it != directs.end(); ++it) {
     ss << "\t" << it->first << "\n";
@@ -60,23 +62,43 @@ String Field::toString() const {
 }
 
 void Field::update(const DateTime & time) {
-  std::map< String, Field* >::iterator it;
-  for(it = this->directs.begin(); it != this->directs.end(); ++ it) {
-    if (trams.count(it->first) > 0) {
-      it->second->insertTramLater(trams[it->first], speed/10);
+
+  std::vector< Tram*>::iterator it;
+  for (it = this->trams.begin(); it != this->trams.end(); ++it) {
+    if (directs.count((*it)->nextStop()) > 0) {
+      directs[(*it)->nextStop()]->insertTramLater((*it), speed / 2);
+    } else {
+      nextTrams.push_back(*it);
     }
+    (*it)->update(time, name);
   }
 }
 
 void Field::nextState() {
+
   trams = nextTrams;
+  nextTrams = std::vector< Tram*>();
+  if (trams.size() > 0) {
+//    std::cout << name << ":\n";
+    std::vector<Tram*>::iterator it;
+    for (it = trams.begin(); it != trams.end(); ++it) {
+//      std::cout << "\t" << (std::string) **it << "\n";
+      (*it)->setPosition(x, y);
+    }
+  }
 }
 
 void Field::insertTram(Tram* tram) {
-  trams[tram->nextStop()] = tram;
+  trams.push_back(tram);
   tram->setPosition(x, y);
+  //std::cout << this->name << ": Tram insert\n";
 }
 
 void Field::insertTramLater(Tram* tram, int dist) {
-  
+  //std::cout << this->name << this->x << "," << this->y << ": Tram insert " << dist << " -> " << tram->nextStop() << "\n";
+  if (dist == 0 || tram->nextStop() == this->getName()) {
+    nextTrams.push_back(tram);
+  } else {
+    directs[tram->nextStop()]->insertTramLater(tram, dist - 1);
+  }
 }

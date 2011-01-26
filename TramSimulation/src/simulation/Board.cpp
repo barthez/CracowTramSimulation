@@ -115,8 +115,20 @@ void Board::Init() {
 }
 
 bool Board::draw(const Surface& s) {
-  //TODO rysuj tramwaje
-  return Surface::draw(s);
+   Surface::draw(s);
+
+  std::vector< Tram* >::iterator it;
+  for(it = trams.begin(); it != trams.end(); ++it) {
+    Surface & sss = (*it)->getSurface();
+    int oldOffsetX, oldOffsetY;
+    oldOffsetX = sss.getOffsetX();
+    oldOffsetY = sss.getOffsetY();
+    sss.setOffset(oldOffsetX - crop.x, oldOffsetY - crop.y);
+    sss.draw(s);
+    sss.setOffset(oldOffsetX, oldOffsetY);
+
+  }
+  return true;
 }
 
 Field * Board::addField(int x, int y, String & to, Field * prev) {
@@ -140,7 +152,7 @@ Field * Board::addField(int x, int y, String & to, Field * prev) {
 void Board::update(const DateTime & time) {
 //  Uint32 t = SDL_GetTicks();
   int i, j;
-
+  std::cout << (std::string) time << "\n";
   for (i = 0; i < board.size(); ++i) {
     for (j = 0; j < board[i].size(); ++j) {
       if (board[i][j] == NULL) continue;
@@ -161,6 +173,8 @@ void Board::update(const DateTime & time) {
 
 void Board::insertTram(Tram * t) {
   tramStops[t->nextStop()]->insertTram(t);
+  trams.push_back(t);
+  std::cout << "Bla: " << trams.size() << "\n";
 }
 
 void Board::LMBPressed(Uint16 x, Uint16 y) {

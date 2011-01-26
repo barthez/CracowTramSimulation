@@ -19,3 +19,9 @@ TramStop::~TramStop() {
 Uint32 TramStop::getColor(const SDL_PixelFormat * format) const {
   return SDL_MapRGB(format, 0x11, 0x11, 0xff);
 }
+
+void TramStop::update(const DateTime & time) {
+//  std::cout << getName() << " trams: " << trams.size();
+
+  Field::update(time);
+}

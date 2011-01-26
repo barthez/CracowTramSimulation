@@ -7,7 +7,7 @@
 
 #include "Simulation.h"
 
-Simulation::Simulation(std::vector < std::string > schedules, std::string infrastructure) : board(infrastructure), simTime(2,1,5,2), timeSurf("-", "czcionka.ttf", 20) {
+Simulation::Simulation(std::vector < std::string > schedules, std::string infrastructure) : board(infrastructure), simTime(0,7,1,1), timeSurf("-", "czcionka.ttf", 20) {
   timeSurf.setText(((std::string) simTime).c_str());
   timeSurf.setOffset(20, 550);
 
@@ -24,8 +24,9 @@ Simulation::Simulation(std::vector < std::string > schedules, std::string infras
     std::string dz, przy;
     linia = doc.RootElement();
     linia->Attribute("number", &l);
-    for(brygada = linia->FirstChildElement("squad"); brygada; brygada = brygada->NextSiblingElement("brygada") ) {
+    for(brygada = linia->FirstChildElement("squad"); brygada; brygada = brygada->NextSiblingElement("squad") ) {
       brygada->Attribute("number", &b);
+      std::cout << "Brygada " << b << "\n";
       Tram * t = new Tram(l,b);
       for(dzien = brygada->FirstChildElement("day"); dzien; dzien = dzien->NextSiblingElement("day")) {
         dz = dzien->Attribute("name");
@@ -33,7 +34,8 @@ Simulation::Simulation(std::vector < std::string > schedules, std::string infras
         for(przystanek = dzien->FirstChildElement("stop"); przystanek; przystanek = przystanek->NextSiblingElement("stop") ) {
           przystanek->Attribute("hour", &g);
           przystanek->Attribute("minute", &m);
-          przy = std::string(przystanek->FirstChildElement()->GetText());
+          const char * a = przystanek->FirstChild()->ToText()->Value();
+          przy = std::string(a);
           rozklad[ Time(m, g) ] = przy;          
         }
         t->addSchedule(dz, rozklad);

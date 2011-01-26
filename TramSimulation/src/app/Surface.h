@@ -31,13 +31,16 @@ public:
 
   void setCrop(int x, int y, int w = 0, int h = 0);
   void setOffset(int x, int y);
-  bool draw(const Surface & s);
+  virtual bool draw(const Surface & s);
   bool flip();
 
   int getWidth() const;
   int getHeight() const;
   SDL_Rect getOffset() const;
   SDL_Rect getCrop() const;
+
+  int getOffsetX() const;
+  int getOffsetY() const;
 
   virtual void RMBPressed(Uint16 x, Uint16 y);
   virtual void RMBReleased(Uint16 x, Uint16 y);

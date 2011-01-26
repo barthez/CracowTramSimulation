@@ -16,6 +16,8 @@ public:
   TramStop(const TramStop& orig);
   virtual ~TramStop();
 
+  virtual void update(const DateTime & time);
+
   virtual Uint32 getColor(const SDL_PixelFormat * format) const;
 private:
   int i;

@@ -1,0 +1,918 @@
+<?xml version="1.0" ?>
+
+<line number="12">
+<squad number="01">
+<day name="Dzień powszedni">
+  <stop hour="8" minute="05">Cichy Kącik</stop>
+  <stop hour="8" minute="06">Reymana</stop>
+  <stop hour="8" minute="07">Park Jordana</stop>
+  <stop hour="8" minute="08">Oleandry</stop>
+  <stop hour="8" minute="09">Cracovia</stop>
+  <stop hour="8" minute="11">Uniwersytet Jagielloński</stop>
+  <stop hour="8" minute="14">Teatr Bagatela</stop>
+  <stop hour="8" minute="16">Basztowa LOT</stop>
+  <stop hour="8" minute="19">Dworzec Główny</stop>
+  <stop hour="8" minute="21">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="23">Politechnika</stop>
+  <stop hour="8" minute="25">Dworzec Towarowy</stop>
+  <stop hour="8" minute="27">Prądnicka</stop>
+  <stop hour="8" minute="28">Bratysławska</stop>
+  <stop hour="8" minute="46">Krowodrza Górka</stop>
+  <stop hour="8" minute="47">Bratysławska</stop>
+  <stop hour="8" minute="49">Prądnicka</stop>
+  <stop hour="8" minute="51">Dworzec Towarowy</stop>
+  <stop hour="8" minute="53">Politechnika</stop>
+  <stop hour="8" minute="54">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="57">Dworzec Główny</stop>
+  <stop hour="8" minute="59">Basztowa LOT</stop>
+  <stop hour="9" minute="02">Teatr Bagatela</stop>
+  <stop hour="9" minute="04">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="06">Cracovia</stop>
+  <stop hour="9" minute="07">Oleandry</stop>
+  <stop hour="9" minute="08">Park Jordana</stop>
+  <stop hour="9" minute="09">Reymana</stop>
+  <stop hour="9" minute="25">Cichy Kącik</stop>
+  <stop hour="9" minute="26">Reymana</stop>
+  <stop hour="9" minute="27">Park Jordana</stop>
+  <stop hour="9" minute="28">Oleandry</stop>
+  <stop hour="9" minute="29">Cracovia</stop>
+  <stop hour="9" minute="31">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="34">Teatr Bagatela</stop>
+  <stop hour="9" minute="36">Basztowa LOT</stop>
+  <stop hour="9" minute="39">Dworzec Główny</stop>
+  <stop hour="9" minute="41">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="43">Politechnika</stop>
+  <stop hour="9" minute="45">Dworzec Towarowy</stop>
+  <stop hour="9" minute="47">Prądnicka</stop>
+  <stop hour="9" minute="48">Bratysławska</stop>
+  <stop hour="10" minute="06">Krowodrza Górka</stop>
+  <stop hour="10" minute="07">Bratysławska</stop>
+  <stop hour="10" minute="09">Prądnicka</stop>
+  <stop hour="10" minute="11">Dworzec Towarowy</stop>
+  <stop hour="10" minute="13">Politechnika</stop>
+  <stop hour="10" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="17">Dworzec Główny</stop>
+  <stop hour="10" minute="19">Basztowa LOT</stop>
+  <stop hour="10" minute="22">Teatr Bagatela</stop>
+  <stop hour="10" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="26">Cracovia</stop>
+  <stop hour="10" minute="27">Oleandry</stop>
+  <stop hour="10" minute="28">Park Jordana</stop>
+  <stop hour="10" minute="29">Reymana</stop>
+  <stop hour="10" minute="47">Cichy Kącik</stop>
+  <stop hour="10" minute="48">Reymana</stop>
+  <stop hour="10" minute="49">Park Jordana</stop>
+  <stop hour="10" minute="50">Oleandry</stop>
+  <stop hour="10" minute="51">Cracovia</stop>
+  <stop hour="10" minute="53">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="56">Teatr Bagatela</stop>
+  <stop hour="10" minute="58">Basztowa LOT</stop>
+  <stop hour="11" minute="01">Dworzec Główny</stop>
+  <stop hour="11" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="05">Politechnika</stop>
+  <stop hour="11" minute="07">Dworzec Towarowy</stop>
+  <stop hour="11" minute="09">Prądnicka</stop>
+  <stop hour="11" minute="10">Bratysławska</stop>
+  <stop hour="11" minute="26">Krowodrza Górka</stop>
+  <stop hour="11" minute="27">Bratysławska</stop>
+  <stop hour="11" minute="29">Prądnicka</stop>
+  <stop hour="11" minute="31">Dworzec Towarowy</stop>
+  <stop hour="11" minute="33">Politechnika</stop>
+  <stop hour="11" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="37">Dworzec Główny</stop>
+  <stop hour="11" minute="39">Basztowa LOT</stop>
+  <stop hour="11" minute="42">Teatr Bagatela</stop>
+  <stop hour="11" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="46">Cracovia</stop>
+  <stop hour="11" minute="47">Oleandry</stop>
+  <stop hour="11" minute="48">Park Jordana</stop>
+  <stop hour="11" minute="49">Reymana</stop>
+  <stop hour="12" minute="07">Cichy Kącik</stop>
+  <stop hour="12" minute="08">Reymana</stop>
+  <stop hour="12" minute="09">Park Jordana</stop>
+  <stop hour="12" minute="10">Oleandry</stop>
+  <stop hour="12" minute="11">Cracovia</stop>
+  <stop hour="12" minute="13">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="16">Teatr Bagatela</stop>
+  <stop hour="12" minute="18">Basztowa LOT</stop>
+  <stop hour="12" minute="21">Dworzec Główny</stop>
+  <stop hour="12" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="25">Politechnika</stop>
+  <stop hour="12" minute="27">Dworzec Towarowy</stop>
+  <stop hour="12" minute="29">Prądnicka</stop>
+  <stop hour="12" minute="30">Bratysławska</stop>
+  <stop hour="12" minute="47">Krowodrza Górka</stop>
+  <stop hour="12" minute="48">Bratysławska</stop>
+  <stop hour="12" minute="50">Prądnicka</stop>
+  <stop hour="12" minute="52">Dworzec Towarowy</stop>
+  <stop hour="12" minute="54">Politechnika</stop>
+  <stop hour="12" minute="55">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="58">Dworzec Główny</stop>
+  <stop hour="13" minute="00">Basztowa LOT</stop>
+  <stop hour="13" minute="03">Teatr Bagatela</stop>
+  <stop hour="13" minute="05">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="07">Cracovia</stop>
+  <stop hour="13" minute="08">Oleandry</stop>
+  <stop hour="13" minute="09">Park Jordana</stop>
+  <stop hour="13" minute="10">Reymana</stop>
+  <stop hour="13" minute="26">Cichy Kącik</stop>
+  <stop hour="13" minute="27">Reymana</stop>
+  <stop hour="13" minute="28">Park Jordana</stop>
+  <stop hour="13" minute="29">Oleandry</stop>
+  <stop hour="13" minute="30">Cracovia</stop>
+  <stop hour="13" minute="32">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="35">Teatr Bagatela</stop>
+  <stop hour="13" minute="38">Basztowa LOT</stop>
+  <stop hour="13" minute="41">Dworzec Główny</stop>
+  <stop hour="13" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="45">Politechnika</stop>
+  <stop hour="13" minute="47">Dworzec Towarowy</stop>
+  <stop hour="13" minute="49">Prądnicka</stop>
+  <stop hour="13" minute="50">Bratysławska</stop>
+  <stop hour="14" minute="07">Krowodrza Górka</stop>
+  <stop hour="14" minute="08">Bratysławska</stop>
+  <stop hour="14" minute="10">Prądnicka</stop>
+  <stop hour="14" minute="12">Dworzec Towarowy</stop>
+  <stop hour="14" minute="14">Politechnika</stop>
+  <stop hour="14" minute="15">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="18">Dworzec Główny</stop>
+  <stop hour="14" minute="20">Basztowa LOT</stop>
+  <stop hour="14" minute="23">Teatr Bagatela</stop>
+  <stop hour="14" minute="25">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="27">Cracovia</stop>
+  <stop hour="14" minute="28">Oleandry</stop>
+  <stop hour="14" minute="29">Park Jordana</stop>
+  <stop hour="14" minute="30">Reymana</stop>
+  <stop hour="14" minute="46">Cichy Kącik</stop>
+  <stop hour="14" minute="47">Reymana</stop>
+  <stop hour="14" minute="48">Park Jordana</stop>
+  <stop hour="14" minute="49">Oleandry</stop>
+  <stop hour="14" minute="50">Cracovia</stop>
+  <stop hour="14" minute="52">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="55">Teatr Bagatela</stop>
+  <stop hour="14" minute="58">Basztowa LOT</stop>
+  <stop hour="15" minute="01">Dworzec Główny</stop>
+  <stop hour="15" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="05">Politechnika</stop>
+  <stop hour="15" minute="07">Dworzec Towarowy</stop>
+  <stop hour="15" minute="09">Prądnicka</stop>
+  <stop hour="15" minute="10">Bratysławska</stop>
+  <stop hour="15" minute="27">Krowodrza Górka</stop>
+  <stop hour="15" minute="28">Bratysławska</stop>
+  <stop hour="15" minute="30">Prądnicka</stop>
+  <stop hour="15" minute="32">Dworzec Towarowy</stop>
+  <stop hour="15" minute="34">Politechnika</stop>
+  <stop hour="15" minute="35">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="38">Dworzec Główny</stop>
+  <stop hour="15" minute="39">Basztowa LOT</stop>
+  <stop hour="15" minute="43">Teatr Bagatela</stop>
+  <stop hour="15" minute="45">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="47">Cracovia</stop>
+  <stop hour="15" minute="48">Oleandry</stop>
+  <stop hour="15" minute="49">Park Jordana</stop>
+  <stop hour="15" minute="50">Reymana</stop>
+  <stop hour="16" minute="06">Cichy Kącik</stop>
+  <stop hour="16" minute="07">Reymana</stop>
+  <stop hour="16" minute="08">Park Jordana</stop>
+  <stop hour="16" minute="09">Oleandry</stop>
+  <stop hour="16" minute="10">Cracovia</stop>
+  <stop hour="16" minute="12">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="15">Teatr Bagatela</stop>
+  <stop hour="16" minute="18">Basztowa LOT</stop>
+  <stop hour="16" minute="21">Dworzec Główny</stop>
+  <stop hour="16" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="25">Politechnika</stop>
+  <stop hour="16" minute="27">Dworzec Towarowy</stop>
+  <stop hour="16" minute="29">Prądnicka</stop>
+  <stop hour="16" minute="30">Bratysławska</stop>
+  <stop hour="16" minute="47">Krowodrza Górka</stop>
+  <stop hour="16" minute="48">Bratysławska</stop>
+  <stop hour="16" minute="50">Prądnicka</stop>
+  <stop hour="16" minute="52">Dworzec Towarowy</stop>
+  <stop hour="16" minute="54">Politechnika</stop>
+  <stop hour="16" minute="55">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="58">Dworzec Główny</stop>
+  <stop hour="17" minute="00">Basztowa LOT</stop>
+  <stop hour="17" minute="03">Teatr Bagatela</stop>
+  <stop hour="17" minute="05">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="07">Cracovia</stop>
+  <stop hour="17" minute="08">Oleandry</stop>
+  <stop hour="17" minute="09">Park Jordana</stop>
+  <stop hour="17" minute="10">Reymana</stop>
+  <stop hour="17" minute="27">Cichy Kącik</stop>
+  <stop hour="17" minute="28">Reymana</stop>
+  <stop hour="17" minute="29">Park Jordana</stop>
+  <stop hour="17" minute="30">Oleandry</stop>
+  <stop hour="17" minute="31">Cracovia</stop>
+  <stop hour="17" minute="33">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="36">Teatr Bagatela</stop>
+  <stop hour="17" minute="38">Basztowa LOT</stop>
+  <stop hour="17" minute="41">Dworzec Główny</stop>
+  <stop hour="17" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="45">Politechnika</stop>
+  <stop hour="17" minute="47">Dworzec Towarowy</stop>
+  <stop hour="17" minute="49">Prądnicka</stop>
+  <stop hour="17" minute="50">Bratysławska</stop>
+  <stop hour="18" minute="06">Krowodrza Górka</stop>
+  <stop hour="18" minute="07">Bratysławska</stop>
+  <stop hour="18" minute="09">Prądnicka</stop>
+  <stop hour="18" minute="11">Dworzec Towarowy</stop>
+  <stop hour="18" minute="13">Politechnika</stop>
+  <stop hour="18" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="18" minute="17">Dworzec Główny</stop>
+  <stop hour="18" minute="19">Basztowa LOT</stop>
+  <stop hour="18" minute="22">Teatr Bagatela</stop>
+  <stop hour="18" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="18" minute="26">Cracovia</stop>
+  <stop hour="18" minute="27">Oleandry</stop>
+  <stop hour="18" minute="28">Park Jordana</stop>
+  <stop hour="18" minute="29">Reymana</stop>
+</day>
+</squad>
+<squad number="02">
+<day name="Dzień powszedni">
+  <stop hour="7" minute="57">Krowodrza Górka</stop>
+  <stop hour="7" minute="58">Bratysławska</stop>
+  <stop hour="8" minute="00">Prądnicka</stop>
+  <stop hour="8" minute="02">Dworzec Towarowy</stop>
+  <stop hour="8" minute="04">Politechnika</stop>
+  <stop hour="8" minute="05">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="08">Dworzec Główny</stop>
+  <stop hour="8" minute="10">Basztowa LOT</stop>
+  <stop hour="8" minute="13">Teatr Bagatela</stop>
+  <stop hour="8" minute="15">Uniwersytet Jagielloński</stop>
+  <stop hour="8" minute="17">Cracovia</stop>
+  <stop hour="8" minute="18">Oleandry</stop>
+  <stop hour="8" minute="19">Park Jordana</stop>
+  <stop hour="8" minute="20">Reymana</stop>
+  <stop hour="8" minute="25">Cichy Kącik</stop>
+  <stop hour="8" minute="26">Reymana</stop>
+  <stop hour="8" minute="27">Park Jordana</stop>
+  <stop hour="8" minute="28">Oleandry</stop>
+  <stop hour="8" minute="29">Cracovia</stop>
+  <stop hour="8" minute="31">Uniwersytet Jagielloński</stop>
+  <stop hour="8" minute="34">Teatr Bagatela</stop>
+  <stop hour="8" minute="36">Basztowa LOT</stop>
+  <stop hour="8" minute="39">Dworzec Główny</stop>
+  <stop hour="8" minute="41">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="43">Politechnika</stop>
+  <stop hour="8" minute="45">Dworzec Towarowy</stop>
+  <stop hour="8" minute="47">Prądnicka</stop>
+  <stop hour="8" minute="48">Bratysławska</stop>
+  <stop hour="9" minute="06">Krowodrza Górka</stop>
+  <stop hour="9" minute="07">Bratysławska</stop>
+  <stop hour="9" minute="09">Prądnicka</stop>
+  <stop hour="9" minute="11">Dworzec Towarowy</stop>
+  <stop hour="9" minute="13">Politechnika</stop>
+  <stop hour="9" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="17">Dworzec Główny</stop>
+  <stop hour="9" minute="19">Basztowa LOT</stop>
+  <stop hour="9" minute="22">Teatr Bagatela</stop>
+  <stop hour="9" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="26">Cracovia</stop>
+  <stop hour="9" minute="27">Oleandry</stop>
+  <stop hour="9" minute="28">Park Jordana</stop>
+  <stop hour="9" minute="29">Reymana</stop>
+  <stop hour="9" minute="45">Cichy Kącik</stop>
+  <stop hour="9" minute="46">Reymana</stop>
+  <stop hour="9" minute="47">Park Jordana</stop>
+  <stop hour="9" minute="48">Oleandry</stop>
+  <stop hour="9" minute="49">Cracovia</stop>
+  <stop hour="9" minute="51">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="54">Teatr Bagatela</stop>
+  <stop hour="9" minute="56">Basztowa LOT</stop>
+  <stop hour="9" minute="59">Dworzec Główny</stop>
+  <stop hour="10" minute="01">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="03">Politechnika</stop>
+  <stop hour="10" minute="05">Dworzec Towarowy</stop>
+  <stop hour="10" minute="07">Prądnicka</stop>
+  <stop hour="10" minute="08">Bratysławska</stop>
+  <stop hour="10" minute="26">Krowodrza Górka</stop>
+  <stop hour="10" minute="27">Bratysławska</stop>
+  <stop hour="10" minute="29">Prądnicka</stop>
+  <stop hour="10" minute="31">Dworzec Towarowy</stop>
+  <stop hour="10" minute="33">Politechnika</stop>
+  <stop hour="10" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="37">Dworzec Główny</stop>
+  <stop hour="10" minute="39">Basztowa LOT</stop>
+  <stop hour="10" minute="42">Teatr Bagatela</stop>
+  <stop hour="10" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="46">Cracovia</stop>
+  <stop hour="10" minute="47">Oleandry</stop>
+  <stop hour="10" minute="48">Park Jordana</stop>
+  <stop hour="10" minute="49">Reymana</stop>
+  <stop hour="11" minute="07">Cichy Kącik</stop>
+  <stop hour="11" minute="08">Reymana</stop>
+  <stop hour="11" minute="09">Park Jordana</stop>
+  <stop hour="11" minute="10">Oleandry</stop>
+  <stop hour="11" minute="11">Cracovia</stop>
+  <stop hour="11" minute="13">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="16">Teatr Bagatela</stop>
+  <stop hour="11" minute="18">Basztowa LOT</stop>
+  <stop hour="11" minute="21">Dworzec Główny</stop>
+  <stop hour="11" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="25">Politechnika</stop>
+  <stop hour="11" minute="27">Dworzec Towarowy</stop>
+  <stop hour="11" minute="29">Prądnicka</stop>
+  <stop hour="11" minute="30">Bratysławska</stop>
+  <stop hour="11" minute="46">Krowodrza Górka</stop>
+  <stop hour="11" minute="47">Bratysławska</stop>
+  <stop hour="11" minute="49">Prądnicka</stop>
+  <stop hour="11" minute="51">Dworzec Towarowy</stop>
+  <stop hour="11" minute="53">Politechnika</stop>
+  <stop hour="11" minute="54">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="57">Dworzec Główny</stop>
+  <stop hour="11" minute="59">Basztowa LOT</stop>
+  <stop hour="12" minute="02">Teatr Bagatela</stop>
+  <stop hour="12" minute="04">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="06">Cracovia</stop>
+  <stop hour="12" minute="07">Oleandry</stop>
+  <stop hour="12" minute="08">Park Jordana</stop>
+  <stop hour="12" minute="09">Reymana</stop>
+  <stop hour="12" minute="27">Cichy Kącik</stop>
+  <stop hour="12" minute="28">Reymana</stop>
+  <stop hour="12" minute="29">Park Jordana</stop>
+  <stop hour="12" minute="30">Oleandry</stop>
+  <stop hour="12" minute="31">Cracovia</stop>
+  <stop hour="12" minute="33">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="36">Teatr Bagatela</stop>
+  <stop hour="12" minute="38">Basztowa LOT</stop>
+  <stop hour="12" minute="41">Dworzec Główny</stop>
+  <stop hour="12" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="45">Politechnika</stop>
+  <stop hour="12" minute="47">Dworzec Towarowy</stop>
+  <stop hour="12" minute="49">Prądnicka</stop>
+  <stop hour="12" minute="50">Bratysławska</stop>
+  <stop hour="13" minute="07">Krowodrza Górka</stop>
+  <stop hour="13" minute="08">Bratysławska</stop>
+  <stop hour="13" minute="10">Prądnicka</stop>
+  <stop hour="13" minute="12">Dworzec Towarowy</stop>
+  <stop hour="13" minute="14">Politechnika</stop>
+  <stop hour="13" minute="15">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="18">Dworzec Główny</stop>
+  <stop hour="13" minute="20">Basztowa LOT</stop>
+  <stop hour="13" minute="23">Teatr Bagatela</stop>
+  <stop hour="13" minute="25">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="27">Cracovia</stop>
+  <stop hour="13" minute="28">Oleandry</stop>
+  <stop hour="13" minute="29">Park Jordana</stop>
+  <stop hour="13" minute="30">Reymana</stop>
+  <stop hour="13" minute="46">Cichy Kącik</stop>
+  <stop hour="13" minute="47">Reymana</stop>
+  <stop hour="13" minute="48">Park Jordana</stop>
+  <stop hour="13" minute="49">Oleandry</stop>
+  <stop hour="13" minute="50">Cracovia</stop>
+  <stop hour="13" minute="52">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="55">Teatr Bagatela</stop>
+  <stop hour="13" minute="58">Basztowa LOT</stop>
+  <stop hour="14" minute="01">Dworzec Główny</stop>
+  <stop hour="14" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="05">Politechnika</stop>
+  <stop hour="14" minute="07">Dworzec Towarowy</stop>
+  <stop hour="14" minute="09">Prądnicka</stop>
+  <stop hour="14" minute="10">Bratysławska</stop>
+  <stop hour="14" minute="27">Krowodrza Górka</stop>
+  <stop hour="14" minute="28">Bratysławska</stop>
+  <stop hour="14" minute="30">Prądnicka</stop>
+  <stop hour="14" minute="32">Dworzec Towarowy</stop>
+  <stop hour="14" minute="34">Politechnika</stop>
+  <stop hour="14" minute="35">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="38">Dworzec Główny</stop>
+  <stop hour="14" minute="39">Basztowa LOT</stop>
+  <stop hour="14" minute="43">Teatr Bagatela</stop>
+  <stop hour="14" minute="45">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="47">Cracovia</stop>
+  <stop hour="14" minute="48">Oleandry</stop>
+  <stop hour="14" minute="49">Park Jordana</stop>
+  <stop hour="14" minute="50">Reymana</stop>
+  <stop hour="15" minute="06">Cichy Kącik</stop>
+  <stop hour="15" minute="07">Reymana</stop>
+  <stop hour="15" minute="08">Park Jordana</stop>
+  <stop hour="15" minute="09">Oleandry</stop>
+  <stop hour="15" minute="10">Cracovia</stop>
+  <stop hour="15" minute="12">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="15">Teatr Bagatela</stop>
+  <stop hour="15" minute="18">Basztowa LOT</stop>
+  <stop hour="15" minute="21">Dworzec Główny</stop>
+  <stop hour="15" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="25">Politechnika</stop>
+  <stop hour="15" minute="27">Dworzec Towarowy</stop>
+  <stop hour="15" minute="29">Prądnicka</stop>
+  <stop hour="15" minute="30">Bratysławska</stop>
+  <stop hour="15" minute="47">Krowodrza Górka</stop>
+  <stop hour="15" minute="48">Bratysławska</stop>
+  <stop hour="15" minute="50">Prądnicka</stop>
+  <stop hour="15" minute="52">Dworzec Towarowy</stop>
+  <stop hour="15" minute="54">Politechnika</stop>
+  <stop hour="15" minute="55">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="58">Dworzec Główny</stop>
+  <stop hour="16" minute="00">Basztowa LOT</stop>
+  <stop hour="16" minute="03">Teatr Bagatela</stop>
+  <stop hour="16" minute="05">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="07">Cracovia</stop>
+  <stop hour="16" minute="08">Oleandry</stop>
+  <stop hour="16" minute="09">Park Jordana</stop>
+  <stop hour="16" minute="10">Reymana</stop>
+  <stop hour="16" minute="26">Cichy Kącik</stop>
+  <stop hour="16" minute="27">Reymana</stop>
+  <stop hour="16" minute="28">Park Jordana</stop>
+  <stop hour="16" minute="29">Oleandry</stop>
+  <stop hour="16" minute="30">Cracovia</stop>
+  <stop hour="16" minute="32">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="35">Teatr Bagatela</stop>
+  <stop hour="16" minute="38">Basztowa LOT</stop>
+  <stop hour="16" minute="41">Dworzec Główny</stop>
+  <stop hour="16" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="45">Politechnika</stop>
+  <stop hour="16" minute="47">Dworzec Towarowy</stop>
+  <stop hour="16" minute="49">Prądnicka</stop>
+  <stop hour="16" minute="50">Bratysławska</stop>
+  <stop hour="17" minute="06">Krowodrza Górka</stop>
+  <stop hour="17" minute="07">Bratysławska</stop>
+  <stop hour="17" minute="09">Prądnicka</stop>
+  <stop hour="17" minute="11">Dworzec Towarowy</stop>
+  <stop hour="17" minute="13">Politechnika</stop>
+  <stop hour="17" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="17">Dworzec Główny</stop>
+  <stop hour="17" minute="19">Basztowa LOT</stop>
+  <stop hour="17" minute="22">Teatr Bagatela</stop>
+  <stop hour="17" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="26">Cracovia</stop>
+  <stop hour="17" minute="27">Oleandry</stop>
+  <stop hour="17" minute="28">Park Jordana</stop>
+  <stop hour="17" minute="29">Reymana</stop>
+  <stop hour="17" minute="47">Cichy Kącik</stop>
+  <stop hour="17" minute="48">Reymana</stop>
+  <stop hour="17" minute="49">Park Jordana</stop>
+  <stop hour="17" minute="50">Oleandry</stop>
+  <stop hour="17" minute="51">Cracovia</stop>
+  <stop hour="17" minute="53">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="56">Teatr Bagatela</stop>
+  <stop hour="17" minute="58">Basztowa LOT</stop>
+  <stop hour="18" minute="01">Dworzec Główny</stop>
+  <stop hour="18" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="18" minute="05">Politechnika</stop>
+  <stop hour="18" minute="07">Dworzec Towarowy</stop>
+  <stop hour="18" minute="09">Prądnicka</stop>
+  <stop hour="18" minute="10">Bratysławska</stop>
+  <stop hour="18" minute="26">Krowodrza Górka</stop>
+  <stop hour="18" minute="27">Bratysławska</stop>
+  <stop hour="18" minute="29">Prądnicka</stop>
+  <stop hour="18" minute="31">Dworzec Towarowy</stop>
+  <stop hour="18" minute="33">Politechnika</stop>
+  <stop hour="18" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="18" minute="37">Dworzec Główny</stop>
+  <stop hour="18" minute="39">Basztowa LOT</stop>
+  <stop hour="18" minute="42">Teatr Bagatela</stop>
+  <stop hour="18" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="18" minute="46">Cracovia</stop>
+  <stop hour="18" minute="47">Oleandry</stop>
+  <stop hour="18" minute="48">Park Jordana</stop>
+  <stop hour="18" minute="49">Reymana</stop>
+  <!-- E.T. Call Home... -->
+</day>
+</squad>
+<squad number="03">
+<day name="Dzień powszedni">
+  <stop hour="8" minute="45">Cichy Kącik</stop>
+  <stop hour="8" minute="46">Reymana</stop>
+  <stop hour="8" minute="47">Park Jordana</stop>
+  <stop hour="8" minute="48">Oleandry</stop>
+  <stop hour="8" minute="49">Cracovia</stop>
+  <stop hour="8" minute="51">Uniwersytet Jagielloński</stop>
+  <stop hour="8" minute="54">Teatr Bagatela</stop>
+  <stop hour="8" minute="56">Basztowa LOT</stop>
+  <stop hour="8" minute="59">Dworzec Główny</stop>
+  <stop hour="9" minute="01">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="03">Politechnika</stop>
+  <stop hour="9" minute="05">Dworzec Towarowy</stop>
+  <stop hour="9" minute="07">Prądnicka</stop>
+  <stop hour="9" minute="08">Bratysławska</stop>
+  <stop hour="9" minute="26">Krowodrza Górka</stop>
+  <stop hour="9" minute="27">Bratysławska</stop>
+  <stop hour="9" minute="29">Prądnicka</stop>
+  <stop hour="9" minute="31">Dworzec Towarowy</stop>
+  <stop hour="9" minute="33">Politechnika</stop>
+  <stop hour="9" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="37">Dworzec Główny</stop>
+  <stop hour="9" minute="39">Basztowa LOT</stop>
+  <stop hour="9" minute="42">Teatr Bagatela</stop>
+  <stop hour="9" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="46">Cracovia</stop>
+  <stop hour="9" minute="47">Oleandry</stop>
+  <stop hour="9" minute="48">Park Jordana</stop>
+  <stop hour="9" minute="49">Reymana</stop>
+  <stop hour="10" minute="05">Cichy Kącik</stop>
+  <stop hour="10" minute="06">Reymana</stop>
+  <stop hour="10" minute="07">Park Jordana</stop>
+  <stop hour="10" minute="08">Oleandry</stop>
+  <stop hour="10" minute="09">Cracovia</stop>
+  <stop hour="10" minute="11">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="14">Teatr Bagatela</stop>
+  <stop hour="10" minute="16">Basztowa LOT</stop>
+  <stop hour="10" minute="19">Dworzec Główny</stop>
+  <stop hour="10" minute="21">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="23">Politechnika</stop>
+  <stop hour="10" minute="25">Dworzec Towarowy</stop>
+  <stop hour="10" minute="27">Prądnicka</stop>
+  <stop hour="10" minute="28">Bratysławska</stop>
+  <stop hour="10" minute="46">Krowodrza Górka</stop>
+  <stop hour="10" minute="47">Bratysławska</stop>
+  <stop hour="10" minute="49">Prądnicka</stop>
+  <stop hour="10" minute="51">Dworzec Towarowy</stop>
+  <stop hour="10" minute="53">Politechnika</stop>
+  <stop hour="10" minute="54">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="57">Dworzec Główny</stop>
+  <stop hour="10" minute="59">Basztowa LOT</stop>
+  <stop hour="11" minute="02">Teatr Bagatela</stop>
+  <stop hour="11" minute="04">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="06">Cracovia</stop>
+  <stop hour="11" minute="07">Oleandry</stop>
+  <stop hour="11" minute="08">Park Jordana</stop>
+  <stop hour="11" minute="09">Reymana</stop>
+  <stop hour="11" minute="27">Cichy Kącik</stop>
+  <stop hour="11" minute="28">Reymana</stop>
+  <stop hour="11" minute="29">Park Jordana</stop>
+  <stop hour="11" minute="30">Oleandry</stop>
+  <stop hour="11" minute="31">Cracovia</stop>
+  <stop hour="11" minute="33">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="36">Teatr Bagatela</stop>
+  <stop hour="11" minute="38">Basztowa LOT</stop>
+  <stop hour="11" minute="41">Dworzec Główny</stop>
+  <stop hour="11" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="45">Politechnika</stop>
+  <stop hour="11" minute="47">Dworzec Towarowy</stop>
+  <stop hour="11" minute="49">Prądnicka</stop>
+  <stop hour="11" minute="50">Bratysławska</stop>
+  <stop hour="12" minute="06">Krowodrza Górka</stop>
+  <stop hour="12" minute="07">Bratysławska</stop>
+  <stop hour="12" minute="09">Prądnicka</stop>
+  <stop hour="12" minute="11">Dworzec Towarowy</stop>
+  <stop hour="12" minute="13">Politechnika</stop>
+  <stop hour="12" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="17">Dworzec Główny</stop>
+  <stop hour="12" minute="19">Basztowa LOT</stop>
+  <stop hour="12" minute="22">Teatr Bagatela</stop>
+  <stop hour="12" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="26">Cracovia</stop>
+  <stop hour="12" minute="27">Oleandry</stop>
+  <stop hour="12" minute="28">Park Jordana</stop>
+  <stop hour="12" minute="29">Reymana</stop>
+  <stop hour="12" minute="47">Cichy Kącik</stop>
+  <stop hour="12" minute="48">Reymana</stop>
+  <stop hour="12" minute="49">Park Jordana</stop>
+  <stop hour="12" minute="50">Oleandry</stop>
+  <stop hour="12" minute="51">Cracovia</stop>
+  <stop hour="12" minute="53">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="56">Teatr Bagatela</stop>
+  <stop hour="12" minute="58">Basztowa LOT</stop>
+  <stop hour="13" minute="01">Dworzec Główny</stop>
+  <stop hour="13" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="05">Politechnika</stop>
+  <stop hour="13" minute="07">Dworzec Towarowy</stop>
+  <stop hour="13" minute="09">Prądnicka</stop>
+  <stop hour="13" minute="10">Bratysławska</stop>
+  <stop hour="13" minute="27">Krowodrza Górka</stop>
+  <stop hour="13" minute="28">Bratysławska</stop>
+  <stop hour="13" minute="30">Prądnicka</stop>
+  <stop hour="13" minute="32">Dworzec Towarowy</stop>
+  <stop hour="13" minute="34">Politechnika</stop>
+  <stop hour="13" minute="35">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="38">Dworzec Główny</stop>
+  <stop hour="13" minute="39">Basztowa LOT</stop>
+  <stop hour="13" minute="43">Teatr Bagatela</stop>
+  <stop hour="13" minute="45">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="47">Cracovia</stop>
+  <stop hour="13" minute="48">Oleandry</stop>
+  <stop hour="13" minute="49">Park Jordana</stop>
+  <stop hour="13" minute="50">Reymana</stop>
+  <stop hour="14" minute="06">Cichy Kącik</stop>
+  <stop hour="14" minute="07">Reymana</stop>
+  <stop hour="14" minute="08">Park Jordana</stop>
+  <stop hour="14" minute="09">Oleandry</stop>
+  <stop hour="14" minute="10">Cracovia</stop>
+  <stop hour="14" minute="12">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="15">Teatr Bagatela</stop>
+  <stop hour="14" minute="18">Basztowa LOT</stop>
+  <stop hour="14" minute="21">Dworzec Główny</stop>
+  <stop hour="14" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="25">Politechnika</stop>
+  <stop hour="14" minute="27">Dworzec Towarowy</stop>
+  <stop hour="14" minute="29">Prądnicka</stop>
+  <stop hour="14" minute="30">Bratysławska</stop>
+  <stop hour="14" minute="47">Krowodrza Górka</stop>
+  <stop hour="14" minute="48">Bratysławska</stop>
+  <stop hour="14" minute="50">Prądnicka</stop>
+  <stop hour="14" minute="52">Dworzec Towarowy</stop>
+  <stop hour="14" minute="54">Politechnika</stop>
+  <stop hour="14" minute="55">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="58">Dworzec Główny</stop>
+  <stop hour="15" minute="00">Basztowa LOT</stop>
+  <stop hour="15" minute="03">Teatr Bagatela</stop>
+  <stop hour="15" minute="05">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="07">Cracovia</stop>
+  <stop hour="15" minute="08">Oleandry</stop>
+  <stop hour="15" minute="09">Park Jordana</stop>
+  <stop hour="15" minute="10">Reymana</stop>
+  <stop hour="15" minute="26">Cichy Kącik</stop>
+  <stop hour="15" minute="27">Reymana</stop>
+  <stop hour="15" minute="28">Park Jordana</stop>
+  <stop hour="15" minute="29">Oleandry</stop>
+  <stop hour="15" minute="30">Cracovia</stop>
+  <stop hour="15" minute="32">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="35">Teatr Bagatela</stop>
+  <stop hour="15" minute="38">Basztowa LOT</stop>
+  <stop hour="15" minute="41">Dworzec Główny</stop>
+  <stop hour="15" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="45">Politechnika</stop>
+  <stop hour="15" minute="47">Dworzec Towarowy</stop>
+  <stop hour="15" minute="49">Prądnicka</stop>
+  <stop hour="15" minute="50">Bratysławska</stop>
+  <stop hour="16" minute="07">Krowodrza Górka</stop>
+  <stop hour="16" minute="08">Bratysławska</stop>
+  <stop hour="16" minute="10">Prądnicka</stop>
+  <stop hour="16" minute="12">Dworzec Towarowy</stop>
+  <stop hour="16" minute="14">Politechnika</stop>
+  <stop hour="16" minute="15">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="18">Dworzec Główny</stop>
+  <stop hour="16" minute="20">Basztowa LOT</stop>
+  <stop hour="16" minute="23">Teatr Bagatela</stop>
+  <stop hour="16" minute="25">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="27">Cracovia</stop>
+  <stop hour="16" minute="28">Oleandry</stop>
+  <stop hour="16" minute="29">Park Jordana</stop>
+  <stop hour="16" minute="30">Reymana</stop>
+  <stop hour="16" minute="46">Cichy Kącik</stop>
+  <stop hour="16" minute="47">Reymana</stop>
+  <stop hour="16" minute="48">Park Jordana</stop>
+  <stop hour="16" minute="49">Oleandry</stop>
+  <stop hour="16" minute="50">Cracovia</stop>
+  <stop hour="16" minute="52">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="55">Teatr Bagatela</stop>
+  <stop hour="16" minute="58">Basztowa LOT</stop>
+  <stop hour="17" minute="01">Dworzec Główny</stop>
+  <stop hour="17" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="05">Politechnika</stop>
+  <stop hour="17" minute="07">Dworzec Towarowy</stop>
+  <stop hour="17" minute="09">Prądnicka</stop>
+  <stop hour="17" minute="10">Bratysławska</stop>
+  <stop hour="17" minute="26">Krowodrza Górka</stop>
+  <stop hour="17" minute="27">Bratysławska</stop>
+  <stop hour="17" minute="29">Prądnicka</stop>
+  <stop hour="17" minute="31">Dworzec Towarowy</stop>
+  <stop hour="17" minute="33">Politechnika</stop>
+  <stop hour="17" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="37">Dworzec Główny</stop>
+  <stop hour="17" minute="39">Basztowa LOT</stop>
+  <stop hour="17" minute="42">Teatr Bagatela</stop>
+  <stop hour="17" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="46">Cracovia</stop>
+  <stop hour="17" minute="47">Oleandry</stop>
+  <stop hour="17" minute="48">Park Jordana</stop>
+  <stop hour="17" minute="49">Reymana</stop>
+  <stop hour="18" minute="09">Cichy Kącik</stop>
+  <stop hour="18" minute="10">Reymana</stop>
+  <stop hour="18" minute="11">Park Jordana</stop>
+  <stop hour="18" minute="12">Oleandry</stop>
+  <stop hour="18" minute="13">Cracovia</stop>
+  <stop hour="18" minute="15">Uniwersytet Jagielloński</stop>
+  <stop hour="18" minute="18">Teatr Bagatela</stop>
+  <stop hour="18" minute="20">Basztowa LOT</stop>
+  <stop hour="18" minute="23">Dworzec Główny</stop>
+  <stop hour="18" minute="25">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="18" minute="27">Politechnika</stop>
+  <stop hour="18" minute="29">Dworzec Towarowy</stop>
+  <stop hour="18" minute="31">Prądnicka</stop>
+  <stop hour="18" minute="32">Bratysławska</stop>
+  <!-- E.T. Call Home... -->
+</day>
+</squad>
+<squad number="04">
+<day name="Dzień powszedni">
+  <stop hour="7" minute="45">Cichy Kącik</stop>
+  <stop hour="7" minute="46">Reymana</stop>
+  <stop hour="7" minute="47">Park Jordana</stop>
+  <stop hour="7" minute="48">Oleandry</stop>
+  <stop hour="7" minute="49">Cracovia</stop>
+  <stop hour="7" minute="51">Uniwersytet Jagielloński</stop>
+  <stop hour="7" minute="54">Teatr Bagatela</stop>
+  <stop hour="7" minute="56">Basztowa LOT</stop>
+  <stop hour="7" minute="59">Dworzec Główny</stop>
+  <stop hour="8" minute="01">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="03">Politechnika</stop>
+  <stop hour="8" minute="05">Dworzec Towarowy</stop>
+  <stop hour="8" minute="07">Prądnicka</stop>
+  <stop hour="8" minute="08">Bratysławska</stop>
+  <stop hour="8" minute="26">Krowodrza Górka</stop>
+  <stop hour="8" minute="27">Bratysławska</stop>
+  <stop hour="8" minute="29">Prądnicka</stop>
+  <stop hour="8" minute="31">Dworzec Towarowy</stop>
+  <stop hour="8" minute="33">Politechnika</stop>
+  <stop hour="8" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="8" minute="37">Dworzec Główny</stop>
+  <stop hour="8" minute="39">Basztowa LOT</stop>
+  <stop hour="8" minute="42">Teatr Bagatela</stop>
+  <stop hour="8" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="8" minute="46">Cracovia</stop>
+  <stop hour="8" minute="47">Oleandry</stop>
+  <stop hour="8" minute="48">Park Jordana</stop>
+  <stop hour="8" minute="49">Reymana</stop>
+  <stop hour="9" minute="05">Cichy Kącik</stop>
+  <stop hour="9" minute="06">Reymana</stop>
+  <stop hour="9" minute="07">Park Jordana</stop>
+  <stop hour="9" minute="08">Oleandry</stop>
+  <stop hour="9" minute="09">Cracovia</stop>
+  <stop hour="9" minute="11">Uniwersytet Jagielloński</stop>
+  <stop hour="9" minute="14">Teatr Bagatela</stop>
+  <stop hour="9" minute="16">Basztowa LOT</stop>
+  <stop hour="9" minute="19">Dworzec Główny</stop>
+  <stop hour="9" minute="21">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="23">Politechnika</stop>
+  <stop hour="9" minute="25">Dworzec Towarowy</stop>
+  <stop hour="9" minute="27">Prądnicka</stop>
+  <stop hour="9" minute="28">Bratysławska</stop>
+  <stop hour="9" minute="46">Krowodrza Górka</stop>
+  <stop hour="9" minute="47">Bratysławska</stop>
+  <stop hour="9" minute="49">Prądnicka</stop>
+  <stop hour="9" minute="51">Dworzec Towarowy</stop>
+  <stop hour="9" minute="53">Politechnika</stop>
+  <stop hour="9" minute="54">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="9" minute="57">Dworzec Główny</stop>
+  <stop hour="9" minute="59">Basztowa LOT</stop>
+  <stop hour="10" minute="02">Teatr Bagatela</stop>
+  <stop hour="10" minute="04">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="06">Cracovia</stop>
+  <stop hour="10" minute="07">Oleandry</stop>
+  <stop hour="10" minute="08">Park Jordana</stop>
+  <stop hour="10" minute="09">Reymana</stop>
+  <stop hour="10" minute="25">Cichy Kącik</stop>
+  <stop hour="10" minute="26">Reymana</stop>
+  <stop hour="10" minute="27">Park Jordana</stop>
+  <stop hour="10" minute="28">Oleandry</stop>
+  <stop hour="10" minute="29">Cracovia</stop>
+  <stop hour="10" minute="31">Uniwersytet Jagielloński</stop>
+  <stop hour="10" minute="34">Teatr Bagatela</stop>
+  <stop hour="10" minute="36">Basztowa LOT</stop>
+  <stop hour="10" minute="39">Dworzec Główny</stop>
+  <stop hour="10" minute="41">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="10" minute="43">Politechnika</stop>
+  <stop hour="10" minute="45">Dworzec Towarowy</stop>
+  <stop hour="10" minute="47">Prądnicka</stop>
+  <stop hour="10" minute="48">Bratysławska</stop>
+  <stop hour="11" minute="06">Krowodrza Górka</stop>
+  <stop hour="11" minute="07">Bratysławska</stop>
+  <stop hour="11" minute="09">Prądnicka</stop>
+  <stop hour="11" minute="11">Dworzec Towarowy</stop>
+  <stop hour="11" minute="13">Politechnika</stop>
+  <stop hour="11" minute="14">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="11" minute="17">Dworzec Główny</stop>
+  <stop hour="11" minute="19">Basztowa LOT</stop>
+  <stop hour="11" minute="22">Teatr Bagatela</stop>
+  <stop hour="11" minute="24">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="26">Cracovia</stop>
+  <stop hour="11" minute="27">Oleandry</stop>
+  <stop hour="11" minute="28">Park Jordana</stop>
+  <stop hour="11" minute="29">Reymana</stop>
+  <stop hour="11" minute="47">Cichy Kącik</stop>
+  <stop hour="11" minute="48">Reymana</stop>
+  <stop hour="11" minute="49">Park Jordana</stop>
+  <stop hour="11" minute="50">Oleandry</stop>
+  <stop hour="11" minute="51">Cracovia</stop>
+  <stop hour="11" minute="53">Uniwersytet Jagielloński</stop>
+  <stop hour="11" minute="56">Teatr Bagatela</stop>
+  <stop hour="11" minute="58">Basztowa LOT</stop>
+  <stop hour="12" minute="01">Dworzec Główny</stop>
+  <stop hour="12" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="05">Politechnika</stop>
+  <stop hour="12" minute="07">Dworzec Towarowy</stop>
+  <stop hour="12" minute="09">Prądnicka</stop>
+  <stop hour="12" minute="10">Bratysławska</stop>
+  <stop hour="12" minute="26">Krowodrza Górka</stop>
+  <stop hour="12" minute="27">Bratysławska</stop>
+  <stop hour="12" minute="29">Prądnicka</stop>
+  <stop hour="12" minute="31">Dworzec Towarowy</stop>
+  <stop hour="12" minute="33">Politechnika</stop>
+  <stop hour="12" minute="34">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="12" minute="37">Dworzec Główny</stop>
+  <stop hour="12" minute="39">Basztowa LOT</stop>
+  <stop hour="12" minute="42">Teatr Bagatela</stop>
+  <stop hour="12" minute="44">Uniwersytet Jagielloński</stop>
+  <stop hour="12" minute="46">Cracovia</stop>
+  <stop hour="12" minute="47">Oleandry</stop>
+  <stop hour="12" minute="48">Park Jordana</stop>
+  <stop hour="12" minute="49">Reymana</stop>
+  <stop hour="13" minute="06">Cichy Kącik</stop>
+  <stop hour="13" minute="07">Reymana</stop>
+  <stop hour="13" minute="08">Park Jordana</stop>
+  <stop hour="13" minute="09">Oleandry</stop>
+  <stop hour="13" minute="10">Cracovia</stop>
+  <stop hour="13" minute="12">Uniwersytet Jagielloński</stop>
+  <stop hour="13" minute="15">Teatr Bagatela</stop>
+  <stop hour="13" minute="18">Basztowa LOT</stop>
+  <stop hour="13" minute="21">Dworzec Główny</stop>
+  <stop hour="13" minute="23">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="25">Politechnika</stop>
+  <stop hour="13" minute="27">Dworzec Towarowy</stop>
+  <stop hour="13" minute="29">Prądnicka</stop>
+  <stop hour="13" minute="30">Bratysławska</stop>
+  <stop hour="13" minute="47">Krowodrza Górka</stop>
+  <stop hour="13" minute="48">Bratysławska</stop>
+  <stop hour="13" minute="50">Prądnicka</stop>
+  <stop hour="13" minute="52">Dworzec Towarowy</stop>
+  <stop hour="13" minute="54">Politechnika</stop>
+  <stop hour="13" minute="55">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="13" minute="58">Dworzec Główny</stop>
+  <stop hour="14" minute="00">Basztowa LOT</stop>
+  <stop hour="14" minute="03">Teatr Bagatela</stop>
+  <stop hour="14" minute="05">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="07">Cracovia</stop>
+  <stop hour="14" minute="08">Oleandry</stop>
+  <stop hour="14" minute="09">Park Jordana</stop>
+  <stop hour="14" minute="10">Reymana</stop>
+  <stop hour="14" minute="26">Cichy Kącik</stop>
+  <stop hour="14" minute="27">Reymana</stop>
+  <stop hour="14" minute="28">Park Jordana</stop>
+  <stop hour="14" minute="29">Oleandry</stop>
+  <stop hour="14" minute="30">Cracovia</stop>
+  <stop hour="14" minute="32">Uniwersytet Jagielloński</stop>
+  <stop hour="14" minute="35">Teatr Bagatela</stop>
+  <stop hour="14" minute="38">Basztowa LOT</stop>
+  <stop hour="14" minute="41">Dworzec Główny</stop>
+  <stop hour="14" minute="43">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="14" minute="45">Politechnika</stop>
+  <stop hour="14" minute="47">Dworzec Towarowy</stop>
+  <stop hour="14" minute="49">Prądnicka</stop>
+  <stop hour="14" minute="50">Bratysławska</stop>
+  <stop hour="15" minute="07">Krowodrza Górka</stop>
+  <stop hour="15" minute="08">Bratysławska</stop>
+  <stop hour="15" minute="10">Prądnicka</stop>
+  <stop hour="15" minute="12">Dworzec Towarowy</stop>
+  <stop hour="15" minute="14">Politechnika</stop>
+  <stop hour="15" minute="15">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="15" minute="18">Dworzec Główny</stop>
+  <stop hour="15" minute="20">Basztowa LOT</stop>
+  <stop hour="15" minute="23">Teatr Bagatela</stop>
+  <stop hour="15" minute="25">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="27">Cracovia</stop>
+  <stop hour="15" minute="28">Oleandry</stop>
+  <stop hour="15" minute="29">Park Jordana</stop>
+  <stop hour="15" minute="30">Reymana</stop>
+  <stop hour="15" minute="46">Cichy Kącik</stop>
+  <stop hour="15" minute="47">Reymana</stop>
+  <stop hour="15" minute="48">Park Jordana</stop>
+  <stop hour="15" minute="49">Oleandry</stop>
+  <stop hour="15" minute="50">Cracovia</stop>
+  <stop hour="15" minute="52">Uniwersytet Jagielloński</stop>
+  <stop hour="15" minute="55">Teatr Bagatela</stop>
+  <stop hour="15" minute="58">Basztowa LOT</stop>
+  <stop hour="16" minute="01">Dworzec Główny</stop>
+  <stop hour="16" minute="03">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="05">Politechnika</stop>
+  <stop hour="16" minute="07">Dworzec Towarowy</stop>
+  <stop hour="16" minute="09">Prądnicka</stop>
+  <stop hour="16" minute="10">Bratysławska</stop>
+  <stop hour="16" minute="27">Krowodrza Górka</stop>
+  <stop hour="16" minute="28">Bratysławska</stop>
+  <stop hour="16" minute="30">Prądnicka</stop>
+  <stop hour="16" minute="32">Dworzec Towarowy</stop>
+  <stop hour="16" minute="34">Politechnika</stop>
+  <stop hour="16" minute="35">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="16" minute="38">Dworzec Główny</stop>
+  <stop hour="16" minute="39">Basztowa LOT</stop>
+  <stop hour="16" minute="43">Teatr Bagatela</stop>
+  <stop hour="16" minute="45">Uniwersytet Jagielloński</stop>
+  <stop hour="16" minute="47">Cracovia</stop>
+  <stop hour="16" minute="48">Oleandry</stop>
+  <stop hour="16" minute="49">Park Jordana</stop>
+  <stop hour="16" minute="50">Reymana</stop>
+  <stop hour="17" minute="06">Cichy Kącik</stop>
+  <stop hour="17" minute="07">Reymana</stop>
+  <stop hour="17" minute="08">Park Jordana</stop>
+  <stop hour="17" minute="09">Oleandry</stop>
+  <stop hour="17" minute="10">Cracovia</stop>
+  <stop hour="17" minute="12">Uniwersytet Jagielloński</stop>
+  <stop hour="17" minute="15">Teatr Bagatela</stop>
+  <stop hour="17" minute="17">Basztowa LOT</stop>
+  <stop hour="17" minute="20">Dworzec Główny</stop>
+  <stop hour="17" minute="22">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="24">Politechnika</stop>
+  <stop hour="17" minute="26">Dworzec Towarowy</stop>
+  <stop hour="17" minute="28">Prądnicka</stop>
+  <stop hour="17" minute="29">Bratysławska</stop>
+  <stop hour="17" minute="46">Krowodrza Górka</stop>
+  <stop hour="17" minute="47">Bratysławska</stop>
+  <stop hour="17" minute="49">Prądnicka</stop>
+  <stop hour="17" minute="51">Dworzec Towarowy</stop>
+  <stop hour="17" minute="53">Politechnika</stop>
+  <stop hour="17" minute="54">Dworzec Główny Zachód (Galeria)</stop>
+  <stop hour="17" minute="57">Dworzec Główny</stop>
+  <stop hour="17" minute="59">Basztowa LOT</stop>
+  <stop hour="18" minute="02">Teatr Bagatela</stop>
+  <stop hour="18" minute="04">Uniwersytet Jagielloński</stop>
+  <stop hour="18" minute="06">Cracovia</stop>
+  <stop hour="18" minute="07">Oleandry</stop>
+  <stop hour="18" minute="08">Park Jordana</stop>
+  <stop hour="18" minute="09">Reymana</stop>
+</day>
+</squad>
+</line>

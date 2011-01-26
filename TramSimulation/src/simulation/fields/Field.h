@@ -18,6 +18,7 @@
 #include <utility>
 #include <string>
 #include <map>
+#include <vector>
 #include <SDL/SDL.h>
 #include "../DateTime.h"
 #include "../entities/Entity.h"
@@ -61,9 +62,10 @@ private:
   String name;
   int x, y;
   SDL_Rect rect;
+protected:
   int speed;
   std::map< String, Field* > directs;
-  std::map< String, Tram* > trams, nextTrams;
+  std::vector< Tram* > trams, nextTrams;
 };
 
 #endif	/* FIELD_H */

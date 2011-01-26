@@ -19,4 +19,5 @@ Entity::~Entity() {
 void Entity::setPosition(int x, int y) {
   this->x = x;
   this->y = y;
+  img.setOffset(20 + FACTOR*x, 20 + FACTOR * y);
 }

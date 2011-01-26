@@ -50,6 +50,7 @@ private:
   TiXmlDocument doc;
   FieldMatrix board;
   StopMap tramStops;
+  std::vector< Tram * > trams;
 
   Field * addField(int x, int y, String & to, Field * prev);
 

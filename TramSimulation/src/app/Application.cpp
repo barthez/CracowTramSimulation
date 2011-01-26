@@ -52,7 +52,7 @@ bool Application::Init(int x, int y, int bpp, const char * title) {
   fps = new TextSurface("FPS: 0", "czcionka.ttf", 20, TTF_STYLE_ITALIC, 240, 10, 10);
 
 
-  showExecTime = showFPS = false;
+  showExecTime = showFPS = startSim = false;
   return true;
 }
 
@@ -63,7 +63,7 @@ void Application::onEvent(SDL_Event * Event) {
 void Application::Loop() {
   //Do some modifications
   if (running == AS_SIMULATION) {
-    sim.update();
+    if (startSim) sim.update();
     view.scrollAtScreenBorder(20, 5);
   }
 
@@ -131,6 +131,9 @@ void Application::KeyPressed(SDLKey sym, SDLMod mod, Uint16 unicode) {
       break;
     case SDLK_F2:
       showExecTime = !showExecTime;
+      break;
+    case SDLK_F3:
+      startSim = !startSim;
       break;
   }
 }
