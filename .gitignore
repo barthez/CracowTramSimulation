@@ -7,3 +7,6 @@
 *.o
 TramSimulation/build
 TramSimulation/dist
+
+##pliki xls
+#.xls
