@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Krzysztof Kutt</LastAuthor>
+  <Created>2011-01-27T03:06:22Z</Created>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8700</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font x:CharSet="238"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s22">
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Arkusz1">
+  <Table ss:ExpandedColumnCount="21" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1">
+   <Row>
+    <Cell><Data ss:Type="String">brygada</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+    <Cell><Data ss:Type="String">Kopiec Wandy</Data></Cell>
+    <Cell><Data ss:Type="String">Os. Piastów</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">6:55</Data></Cell>
+    <Cell><Data ss:Type="String">7:26</Data></Cell>
+    <Cell><Data ss:Type="String">7:53</Data></Cell>
+    <Cell><Data ss:Type="String">8:26</Data></Cell>
+    <Cell><Data ss:Type="String">8:54</Data></Cell>
+    <Cell><Data ss:Type="String">9:35</Data></Cell>
+    <Cell><Data ss:Type="String">10:05</Data></Cell>
+    <Cell><Data ss:Type="String">10:46</Data></Cell>
+    <Cell><Data ss:Type="String">11:13</Data></Cell>
+    <Cell><Data ss:Type="String">12:00</Data></Cell>
+    <Cell><Data ss:Type="String">12:29</Data></Cell>
+    <Cell><Data ss:Type="String">13:07</Data></Cell>
+    <Cell><Data ss:Type="String">13:33</Data></Cell>
+    <Cell><Data ss:Type="String">14:08</Data></Cell>
+    <Cell><Data ss:Type="String">14:41</Data></Cell>
+    <Cell><Data ss:Type="String">15:26</Data></Cell>
+    <Cell><Data ss:Type="String">15:53</Data></Cell>
+    <Cell><Data ss:Type="String">16:27</Data></Cell>
+    <Cell><Data ss:Type="String">16:59</Data></Cell>
+    <Cell><Data ss:Type="String">17:27</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">7:14</Data></Cell>
+    <Cell><Data ss:Type="String">7:46</Data></Cell>
+    <Cell><Data ss:Type="String">8:13</Data></Cell>
+    <Cell><Data ss:Type="String">8:49</Data></Cell>
+    <Cell><Data ss:Type="String">9:22</Data></Cell>
+    <Cell><Data ss:Type="String">10:06</Data></Cell>
+    <Cell><Data ss:Type="String">10:33</Data></Cell>
+    <Cell><Data ss:Type="String">11:08</Data></Cell>
+    <Cell><Data ss:Type="String">11:40</Data></Cell>
+    <Cell><Data ss:Type="String">12:26</Data></Cell>
+    <Cell><Data ss:Type="String">12:53</Data></Cell>
+    <Cell><Data ss:Type="String">13:28</Data></Cell>
+    <Cell><Data ss:Type="String">14:01</Data></Cell>
+    <Cell><Data ss:Type="String">14:34</Data></Cell>
+    <Cell><Data ss:Type="String">15:01</Data></Cell>
+    <Cell><Data ss:Type="String">15:46</Data></Cell>
+    <Cell><Data ss:Type="String">16:14</Data></Cell>
+    <Cell><Data ss:Type="String">16:47</Data></Cell>
+    <Cell><Data ss:Type="String">17:20</Data></Cell>
+    <Cell><Data ss:Type="String">17:47</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">7:34</Data></Cell>
+    <Cell><Data ss:Type="String">8:06</Data></Cell>
+    <Cell><Data ss:Type="String">8:34</Data></Cell>
+    <Cell><Data ss:Type="String">9:08</Data></Cell>
+    <Cell><Data ss:Type="String">9:42</Data></Cell>
+    <Cell><Data ss:Type="String">10:26</Data></Cell>
+    <Cell><Data ss:Type="String">10:53</Data></Cell>
+    <Cell><Data ss:Type="String">11:28</Data></Cell>
+    <Cell><Data ss:Type="String">12:02</Data></Cell>
+    <Cell><Data ss:Type="String">12:46</Data></Cell>
+    <Cell><Data ss:Type="String">13:13</Data></Cell>
+    <Cell><Data ss:Type="String">13:48</Data></Cell>
+    <Cell><Data ss:Type="String">14:21</Data></Cell>
+    <Cell><Data ss:Type="String">14:59</Data></Cell>
+    <Cell><Data ss:Type="String">15:25</Data></Cell>
+    <Cell><Data ss:Type="String">16:06</Data></Cell>
+    <Cell><Data ss:Type="String">16:33</Data></Cell>
+    <Cell><Data ss:Type="String">17:07</Data></Cell>
+    <Cell><Data ss:Type="String">17:42</Data></Cell>
+    <Cell><Data ss:Type="String">18:08</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <PageMargins x:Bottom="0.984251969" x:Left="0.78740157499999996"
+     x:Right="0.78740157499999996" x:Top="0.984251969"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R4C21</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

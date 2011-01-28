@@ -152,7 +152,7 @@ Field * Board::addField(int x, int y, String & to, Field * prev) {
 void Board::update(const DateTime & time) {
 //  Uint32 t = SDL_GetTicks();
   int i, j;
-  std::cout << (std::string) time << "\n";
+  //std::cout << (std::string) time << "\n";
   for (i = 0; i < board.size(); ++i) {
     for (j = 0; j < board[i].size(); ++j) {
       if (board[i][j] == NULL) continue;
@@ -174,7 +174,7 @@ void Board::update(const DateTime & time) {
 void Board::insertTram(Tram * t) {
   tramStops[t->nextStop()]->insertTram(t);
   trams.push_back(t);
-  std::cout << "Bla: " << trams.size() << "\n";
+  //std::cout << "Bla: " << trams.size() << "\n";
 }
 
 void Board::LMBPressed(Uint16 x, Uint16 y) {

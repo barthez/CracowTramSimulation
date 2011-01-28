@@ -11,7 +11,7 @@ Tram::Tram(int l, int s) : Vehicle() {
   img = Surface::loadIMG("tram.png");
   this->line = l;
   this->squad = s;
-  state = STATE_RUN;
+  state = STATE_WAIT;
 }
 
 Tram::Tram(const Tram& orig) : Vehicle(orig) {

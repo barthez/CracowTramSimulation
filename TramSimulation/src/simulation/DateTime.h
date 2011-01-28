@@ -43,12 +43,12 @@ namespace Sim {
 
   class Time {
   public:
-    Time(int min = 0, int hour = 0);
+    Time(int sec = 0, int min = 0, int hour = 0);
     virtual ~Time();
 
 
 
-    virtual void adjust(int min, int hour = 0);
+    virtual void adjust(int sec, int min = 0, int hour = 0);
 
     virtual operator string() const;
     Time operator+(const TimeSpan & st);
@@ -59,19 +59,19 @@ namespace Sim {
     virtual bool operator<(const Time & t) const;
     virtual bool operator<=(const Time & t) const;
   protected:
-    int min, hour;
+    int sec,  min, hour;
   };
 
   class DateTime : public Time {
   public:
     static string DAYS_OF_WEEK[7];
 
-    DateTime(int min = 0, int hour = 0, int day = 0, int week = 0);
+    DateTime(int sec =0, int min = 0, int hour = 0, int day = 0, int week = 0);
     DateTime(const Time & t, int day = 0, int week = 0);
     virtual ~DateTime();
 
     const string & dayOfWeek() const;
-    void adjust(int min, int hour = 0, int day = 0, int week = 0);
+    void adjust(int sec, int min =0, int hour = 0, int day = 0, int week = 0);
 
     virtual operator string() const;
     DateTime operator+(const DateTimeSpan & st);

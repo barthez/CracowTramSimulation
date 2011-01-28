@@ -55,25 +55,31 @@ namespace Sim {
     return week;
   }
 
-  Time::Time(int min, int hour) {
-    this->min = min % 60;
-    this->hour = hour + (min / 60);
+  Time::Time(int sec, int min, int hour) {
+    this->sec = sec % 60;
+    this->min = min % 60 + (sec%3600)/60;
+    this->hour = hour + (min / 60) + sec/3600;
   }
 
   Time::~Time() {
 
   }
 
-  void Time::adjust(int min, int hour) {
-    if (min < 0) {
-      this->hour -= ((-min) / 60 + (this->min + (-min) % 60) / 60);
-      this->min = (-(this->min + min)) % 60;
-    } else {
-      this->min += min;
-      this->hour += hour + (this->min / 60);
-      this->min %= 60;
-    }
-    this->hour + hour;
+  void Time::adjust(int sec, int min, int hour) {
+//    if (min < 0) {
+//      this->hour -= ((-min) / 60 + (this->min + (-min) % 60) / 60);
+//      this->min = (-(this->min + min)) % 60;
+//    } else {
+//      this->min += min;
+//      this->hour += hour + (this->min / 60);
+//      this->min %= 60;
+//    }
+//    this->hour + hour;
+    this->sec += sec;
+    this-> min += min + this->sec/60;
+    this->sec %= 60;
+    this->hour += hour + this->min/60;
+    this->min %= 60;
 
   }
 
@@ -83,7 +89,10 @@ namespace Sim {
     ss << hour << ":";
     ss.width(2);
     ss.fill('0');
-    ss << min;
+    ss << min << ":";
+    ss.width(2);
+    ss.fill('0');
+    ss << sec;
     return ss.str();
   }
 
@@ -99,26 +108,26 @@ namespace Sim {
   }
 
   bool Time::operator==(const Time & t) const {
-    return this->hour == t.hour && this->min == t.min;
+    return this->hour == t.hour && this->min == t.min && this->sec == t.sec;
   }
 
   bool Time::operator>(const Time & t) const {
-    return this->hour > t.hour || (this->hour == t.hour && this->min > t.min);
+    return this->hour > t.hour || (this->hour == t.hour && this->min > t.min) || (this->hour == t.hour && this->min == t.min && this->sec > t.sec);
   }
 
   bool Time::operator>=(const Time & t) const {
-    return this->operator ==(t) && this->operator>(t);
+    return this->operator ==(t) || this->operator>(t);
   }
 
   bool Time::operator<(const Time & t) const {
-    return this->hour < t.hour || (this->hour == t.hour && this->min < t.min);
+    return ! operator>=(t);
   }
 
   bool Time::operator<=(const Time & t) const {
-    return this->operator ==(t) && this->operator<(t);
+    return ! operator>(t);
   }
 
-  DateTime::DateTime(int min, int hour, int day, int week) : Time(min, hour) {
+  DateTime::DateTime(int sec, int min, int hour, int day, int week) : Time(sec, min, hour) {
     this->day = day;
     this->week = week;
   }
@@ -132,8 +141,8 @@ namespace Sim {
 
   }
 
-  void DateTime::adjust(int min, int hour, int day, int week) {
-    Time::adjust(min, hour);
+  void DateTime::adjust(int sec, int min, int hour, int day, int week) {
+    Time::adjust(sec, min, hour);
     this->day += day + this->hour / 24;
     this->hour %= 24;
     this->week += week + this->day / 7;

@@ -225,7 +225,14 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="src/tinyxml/xmltest.cpp" ex="true" tool="1">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

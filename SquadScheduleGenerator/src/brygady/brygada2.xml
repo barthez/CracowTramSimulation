@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Krzysztof Kutt</LastAuthor>
+  <Created>2011-01-27T01:52:24Z</Created>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8700</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font x:CharSet="238"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s22">
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Arkusz1">
+  <Table ss:ExpandedColumnCount="37" ss:ExpandedRowCount="4" x:FullColumns="1"
+   x:FullRows="1">
+   <Row>
+    <Cell><Data ss:Type="String">brygada</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+    <Cell><Data ss:Type="String">Salwator</Data></Cell>
+    <Cell><Data ss:Type="String">Cmentarz Rakowicki</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">5.03</Data></Cell>
+    <Cell><Data ss:Type="String">5.26</Data></Cell>
+    <Cell><Data ss:Type="String">6.02</Data></Cell>
+    <Cell><Data ss:Type="String">6.26</Data></Cell>
+    <Cell><Data ss:Type="String">7.03</Data></Cell>
+    <Cell><Data ss:Type="String">7.27</Data></Cell>
+    <Cell><Data ss:Type="String">8.07</Data></Cell>
+    <Cell><Data ss:Type="String">8.34</Data></Cell>
+    <Cell><Data ss:Type="String">9.13</Data></Cell>
+    <Cell><Data ss:Type="String">9.37</Data></Cell>
+    <Cell><Data ss:Type="String">10.13</Data></Cell>
+    <Cell><Data ss:Type="String">10.37</Data></Cell>
+    <Cell><Data ss:Type="String">11.13</Data></Cell>
+    <Cell><Data ss:Type="String">11.37</Data></Cell>
+    <Cell><Data ss:Type="String">12.13</Data></Cell>
+    <Cell><Data ss:Type="String">12.37</Data></Cell>
+    <Cell><Data ss:Type="String">13.11</Data></Cell>
+    <Cell><Data ss:Type="String">13.37</Data></Cell>
+    <Cell><Data ss:Type="String">14.11</Data></Cell>
+    <Cell><Data ss:Type="String">14.37</Data></Cell>
+    <Cell><Data ss:Type="String">15.11</Data></Cell>
+    <Cell><Data ss:Type="String">15.37</Data></Cell>
+    <Cell><Data ss:Type="String">16.11</Data></Cell>
+    <Cell><Data ss:Type="String">16.37</Data></Cell>
+    <Cell><Data ss:Type="String">17.12</Data></Cell>
+    <Cell><Data ss:Type="String">17.36</Data></Cell>
+    <Cell><Data ss:Type="String">18.19</Data></Cell>
+    <Cell><Data ss:Type="String">18.44</Data></Cell>
+    <Cell><Data ss:Type="String">19.22</Data></Cell>
+    <Cell><Data ss:Type="String">19.48</Data></Cell>
+    <Cell><Data ss:Type="String">20.22</Data></Cell>
+    <Cell><Data ss:Type="String">20.48</Data></Cell>
+    <Cell><Data ss:Type="String">21.24</Data></Cell>
+    <Cell><Data ss:Type="String">21.50</Data></Cell>
+    <Cell><Data ss:Type="String">22.18</Data></Cell>
+    <Cell><Data ss:Type="String">22.40</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">5.21</Data></Cell>
+    <Cell><Data ss:Type="String">5.45</Data></Cell>
+    <Cell><Data ss:Type="String">6.23</Data></Cell>
+    <Cell><Data ss:Type="String">6.47</Data></Cell>
+    <Cell><Data ss:Type="String">7.23</Data></Cell>
+    <Cell><Data ss:Type="String">7.47</Data></Cell>
+    <Cell><Data ss:Type="String">8.27</Data></Cell>
+    <Cell><Data ss:Type="String">8.54</Data></Cell>
+    <Cell><Data ss:Type="String">9.33</Data></Cell>
+    <Cell><Data ss:Type="String">9.57</Data></Cell>
+    <Cell><Data ss:Type="String">10.33</Data></Cell>
+    <Cell><Data ss:Type="String">10.57</Data></Cell>
+    <Cell><Data ss:Type="String">11.33</Data></Cell>
+    <Cell><Data ss:Type="String">11.57</Data></Cell>
+    <Cell><Data ss:Type="String">12.33</Data></Cell>
+    <Cell><Data ss:Type="String">12.57</Data></Cell>
+    <Cell><Data ss:Type="String">13.31</Data></Cell>
+    <Cell><Data ss:Type="String">13.57</Data></Cell>
+    <Cell><Data ss:Type="String">14.31</Data></Cell>
+    <Cell><Data ss:Type="String">14.57</Data></Cell>
+    <Cell><Data ss:Type="String">15.31</Data></Cell>
+    <Cell><Data ss:Type="String">15.57</Data></Cell>
+    <Cell><Data ss:Type="String">16.31</Data></Cell>
+    <Cell><Data ss:Type="String">16.57</Data></Cell>
+    <Cell><Data ss:Type="String">17.39</Data></Cell>
+    <Cell><Data ss:Type="String">18.04</Data></Cell>
+    <Cell><Data ss:Type="String">18.36</Data></Cell>
+    <Cell><Data ss:Type="String">19.02</Data></Cell>
+    <Cell><Data ss:Type="String">19.42</Data></Cell>
+    <Cell><Data ss:Type="String">20.08</Data></Cell>
+    <Cell><Data ss:Type="String">20.42</Data></Cell>
+    <Cell><Data ss:Type="String">21.08</Data></Cell>
+    <Cell><Data ss:Type="String">21.41</Data></Cell>
+    <Cell><Data ss:Type="String">22.14</Data></Cell>
+    <Cell><Data ss:Type="String">22.50</Data></Cell>
+    <Cell><Data ss:Type="String">23.11</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s22"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">5.42</Data></Cell>
+    <Cell><Data ss:Type="String">6.05</Data></Cell>
+    <Cell><Data ss:Type="String">6.43</Data></Cell>
+    <Cell><Data ss:Type="String">7.07</Data></Cell>
+    <Cell><Data ss:Type="String">7.43</Data></Cell>
+    <Cell><Data ss:Type="String">8.07</Data></Cell>
+    <Cell><Data ss:Type="String">8.47</Data></Cell>
+    <Cell><Data ss:Type="String">9.14</Data></Cell>
+    <Cell><Data ss:Type="String">9.53</Data></Cell>
+    <Cell><Data ss:Type="String">10.17</Data></Cell>
+    <Cell><Data ss:Type="String">10.53</Data></Cell>
+    <Cell><Data ss:Type="String">11.17</Data></Cell>
+    <Cell><Data ss:Type="String">11.53</Data></Cell>
+    <Cell><Data ss:Type="String">12.17</Data></Cell>
+    <Cell><Data ss:Type="String">12.51</Data></Cell>
+    <Cell><Data ss:Type="String">13.17</Data></Cell>
+    <Cell><Data ss:Type="String">13.51</Data></Cell>
+    <Cell><Data ss:Type="String">14.17</Data></Cell>
+    <Cell><Data ss:Type="String">14.51</Data></Cell>
+    <Cell><Data ss:Type="String">15.17</Data></Cell>
+    <Cell><Data ss:Type="String">15.51</Data></Cell>
+    <Cell><Data ss:Type="String">16.17</Data></Cell>
+    <Cell><Data ss:Type="String">16.52</Data></Cell>
+    <Cell><Data ss:Type="String">17.16</Data></Cell>
+    <Cell><Data ss:Type="String">17.59</Data></Cell>
+    <Cell><Data ss:Type="String">18.24</Data></Cell>
+    <Cell><Data ss:Type="String">18.56</Data></Cell>
+    <Cell><Data ss:Type="String">19.20</Data></Cell>
+    <Cell><Data ss:Type="String">20.02</Data></Cell>
+    <Cell><Data ss:Type="String">20.28</Data></Cell>
+    <Cell><Data ss:Type="String">21.02</Data></Cell>
+    <Cell><Data ss:Type="String">21.28</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <PageMargins x:Bottom="0.984251969" x:Left="0.78740157499999996"
+     x:Right="0.78740157499999996" x:Top="0.984251969"/>
+   </PageSetup>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

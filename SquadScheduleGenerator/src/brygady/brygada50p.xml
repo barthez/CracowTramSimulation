@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Krzysztof Kutt</LastAuthor>
+  <Created>2011-01-27T02:38:08Z</Created>
+  <Version>11.9999</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8700</WindowHeight>
+  <WindowWidth>15195</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>120</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font x:CharSet="238"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s21">
+   <NumberFormat/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Arkusz1">
+  <Table ss:ExpandedColumnCount="25" ss:ExpandedRowCount="11" x:FullColumns="1"
+   x:FullRows="1">
+   <Row>
+    <Cell><Data ss:Type="String">brygada</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+    <Cell><Data ss:Type="String">Kurdwanów</Data></Cell>
+    <Cell><Data ss:Type="String">Krowodrza Górka</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">5:01</Data></Cell>
+    <Cell><Data ss:Type="String">5:46</Data></Cell>
+    <Cell><Data ss:Type="String">6:31</Data></Cell>
+    <Cell><Data ss:Type="String">7:16</Data></Cell>
+    <Cell><Data ss:Type="String">8:11</Data></Cell>
+    <Cell><Data ss:Type="String">8:56</Data></Cell>
+    <Cell><Data ss:Type="String">9:51</Data></Cell>
+    <Cell><Data ss:Type="String">10:36</Data></Cell>
+    <Cell><Data ss:Type="String">11:31</Data></Cell>
+    <Cell><Data ss:Type="String">12:16</Data></Cell>
+    <Cell><Data ss:Type="String">13:11</Data></Cell>
+    <Cell><Data ss:Type="String">13:56</Data></Cell>
+    <Cell><Data ss:Type="String">14:51</Data></Cell>
+    <Cell><Data ss:Type="String">15:36</Data></Cell>
+    <Cell><Data ss:Type="String">16:31</Data></Cell>
+    <Cell><Data ss:Type="String">17:16</Data></Cell>
+    <Cell><Data ss:Type="String">18:11</Data></Cell>
+    <Cell><Data ss:Type="String">18:56</Data></Cell>
+    <Cell><Data ss:Type="String">19:51</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">5:56</Data></Cell>
+    <Cell><Data ss:Type="String">6:41</Data></Cell>
+    <Cell><Data ss:Type="String">7:26</Data></Cell>
+    <Cell><Data ss:Type="String">8:21</Data></Cell>
+    <Cell><Data ss:Type="String">9:06</Data></Cell>
+    <Cell><Data ss:Type="String">10:01</Data></Cell>
+    <Cell><Data ss:Type="String">10:46</Data></Cell>
+    <Cell><Data ss:Type="String">11:41</Data></Cell>
+    <Cell><Data ss:Type="String">12:26</Data></Cell>
+    <Cell><Data ss:Type="String">13:21</Data></Cell>
+    <Cell><Data ss:Type="String">14:06</Data></Cell>
+    <Cell><Data ss:Type="String">15:01</Data></Cell>
+    <Cell><Data ss:Type="String">15:46</Data></Cell>
+    <Cell><Data ss:Type="String">16:41</Data></Cell>
+    <Cell><Data ss:Type="String">17:26</Data></Cell>
+    <Cell><Data ss:Type="String">18:21</Data></Cell>
+    <Cell><Data ss:Type="String">19:06</Data></Cell>
+    <Cell><Data ss:Type="String">20:01</Data></Cell>
+    <Cell><Data ss:Type="String">20:46</Data></Cell>
+    <Cell><Data ss:Type="String">21:37</Data></Cell>
+    <Cell><Data ss:Type="String">22:26</Data></Cell>
+    <Cell><Data ss:Type="String">23:17</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">5:21</Data></Cell>
+    <Cell><Data ss:Type="String">6:06</Data></Cell>
+    <Cell><Data ss:Type="String">6:51</Data></Cell>
+    <Cell><Data ss:Type="String">7:36</Data></Cell>
+    <Cell><Data ss:Type="String">8:31</Data></Cell>
+    <Cell><Data ss:Type="String">9:16</Data></Cell>
+    <Cell><Data ss:Type="String">10:11</Data></Cell>
+    <Cell><Data ss:Type="String">10:56</Data></Cell>
+    <Cell><Data ss:Type="String">11:51</Data></Cell>
+    <Cell><Data ss:Type="String">12:36</Data></Cell>
+    <Cell><Data ss:Type="String">13:31</Data></Cell>
+    <Cell><Data ss:Type="String">14:16</Data></Cell>
+    <Cell><Data ss:Type="String">15:11</Data></Cell>
+    <Cell><Data ss:Type="String">15:56</Data></Cell>
+    <Cell><Data ss:Type="String">16:51</Data></Cell>
+    <Cell><Data ss:Type="String">17:36</Data></Cell>
+    <Cell><Data ss:Type="String">18:31</Data></Cell>
+    <Cell><Data ss:Type="String">19:16</Data></Cell>
+    <Cell><Data ss:Type="String">20:11</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">6:16</Data></Cell>
+    <Cell><Data ss:Type="String">7:01</Data></Cell>
+    <Cell><Data ss:Type="String">7:46</Data></Cell>
+    <Cell><Data ss:Type="String">8:41</Data></Cell>
+    <Cell><Data ss:Type="String">9:26</Data></Cell>
+    <Cell><Data ss:Type="String">10:21</Data></Cell>
+    <Cell><Data ss:Type="String">11:06</Data></Cell>
+    <Cell><Data ss:Type="String">12:01</Data></Cell>
+    <Cell><Data ss:Type="String">12:46</Data></Cell>
+    <Cell><Data ss:Type="String">13:41</Data></Cell>
+    <Cell><Data ss:Type="String">14:26</Data></Cell>
+    <Cell><Data ss:Type="String">15:21</Data></Cell>
+    <Cell><Data ss:Type="String">16:06</Data></Cell>
+    <Cell><Data ss:Type="String">17:01</Data></Cell>
+    <Cell><Data ss:Type="String">17:46</Data></Cell>
+    <Cell><Data ss:Type="String">18:41</Data></Cell>
+    <Cell><Data ss:Type="String">19:26</Data></Cell>
+    <Cell><Data ss:Type="String">20:21</Data></Cell>
+    <Cell><Data ss:Type="String">21:06</Data></Cell>
+    <Cell><Data ss:Type="String">21:57</Data></Cell>
+    <Cell><Data ss:Type="String">22:46</Data></Cell>
+    <Cell><Data ss:Type="String">23:37</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">5:41</Data></Cell>
+    <Cell><Data ss:Type="String">6:26</Data></Cell>
+    <Cell><Data ss:Type="String">7:11</Data></Cell>
+    <Cell><Data ss:Type="String">7:56</Data></Cell>
+    <Cell><Data ss:Type="String">8:51</Data></Cell>
+    <Cell><Data ss:Type="String">9:36</Data></Cell>
+    <Cell><Data ss:Type="String">10:31</Data></Cell>
+    <Cell><Data ss:Type="String">11:16</Data></Cell>
+    <Cell><Data ss:Type="String">12:11</Data></Cell>
+    <Cell><Data ss:Type="String">12:56</Data></Cell>
+    <Cell><Data ss:Type="String">13:51</Data></Cell>
+    <Cell><Data ss:Type="String">14:36</Data></Cell>
+    <Cell><Data ss:Type="String">15:31</Data></Cell>
+    <Cell><Data ss:Type="String">16:16</Data></Cell>
+    <Cell><Data ss:Type="String">17:11</Data></Cell>
+    <Cell><Data ss:Type="String">17:56</Data></Cell>
+    <Cell><Data ss:Type="String">18:51</Data></Cell>
+    <Cell><Data ss:Type="String">19:36</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">5:51</Data></Cell>
+    <Cell><Data ss:Type="String">6:36</Data></Cell>
+    <Cell><Data ss:Type="String">7:21</Data></Cell>
+    <Cell><Data ss:Type="String">8:06</Data></Cell>
+    <Cell><Data ss:Type="String">9:01</Data></Cell>
+    <Cell><Data ss:Type="String">9:46</Data></Cell>
+    <Cell><Data ss:Type="String">10:41</Data></Cell>
+    <Cell><Data ss:Type="String">11:26</Data></Cell>
+    <Cell><Data ss:Type="String">12:21</Data></Cell>
+    <Cell><Data ss:Type="String">13:06</Data></Cell>
+    <Cell><Data ss:Type="String">14:01</Data></Cell>
+    <Cell><Data ss:Type="String">14:46</Data></Cell>
+    <Cell><Data ss:Type="String">15:41</Data></Cell>
+    <Cell><Data ss:Type="String">16:26</Data></Cell>
+    <Cell><Data ss:Type="String">17:21</Data></Cell>
+    <Cell><Data ss:Type="String">18:06</Data></Cell>
+    <Cell><Data ss:Type="String">19:01</Data></Cell>
+    <Cell><Data ss:Type="String">19:46</Data></Cell>
+    <Cell><Data ss:Type="String">20:41</Data></Cell>
+    <Cell><Data ss:Type="String">21:26</Data></Cell>
+    <Cell><Data ss:Type="String">22:17</Data></Cell>
+    <Cell><Data ss:Type="String">23:06</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">5:06</Data></Cell>
+    <Cell><Data ss:Type="String">6:01</Data></Cell>
+    <Cell><Data ss:Type="String">6:46</Data></Cell>
+    <Cell><Data ss:Type="String">7:31</Data></Cell>
+    <Cell><Data ss:Type="String">8:16</Data></Cell>
+    <Cell><Data ss:Type="String">9:11</Data></Cell>
+    <Cell><Data ss:Type="String">9:56</Data></Cell>
+    <Cell><Data ss:Type="String">10:51</Data></Cell>
+    <Cell><Data ss:Type="String">11:36</Data></Cell>
+    <Cell><Data ss:Type="String">12:31</Data></Cell>
+    <Cell><Data ss:Type="String">13:16</Data></Cell>
+    <Cell><Data ss:Type="String">14:11</Data></Cell>
+    <Cell><Data ss:Type="String">14:56</Data></Cell>
+    <Cell><Data ss:Type="String">15:51</Data></Cell>
+    <Cell><Data ss:Type="String">16:36</Data></Cell>
+    <Cell><Data ss:Type="String">17:31</Data></Cell>
+    <Cell><Data ss:Type="String">18:16</Data></Cell>
+    <Cell><Data ss:Type="String">19:11</Data></Cell>
+    <Cell><Data ss:Type="String">19:56</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">5:26</Data></Cell>
+    <Cell><Data ss:Type="String">6:11</Data></Cell>
+    <Cell><Data ss:Type="String">6:56</Data></Cell>
+    <Cell><Data ss:Type="String">7:41</Data></Cell>
+    <Cell><Data ss:Type="String">8:26</Data></Cell>
+    <Cell><Data ss:Type="String">9:21</Data></Cell>
+    <Cell><Data ss:Type="String">10:06</Data></Cell>
+    <Cell><Data ss:Type="String">11:01</Data></Cell>
+    <Cell><Data ss:Type="String">11:46</Data></Cell>
+    <Cell><Data ss:Type="String">12:41</Data></Cell>
+    <Cell><Data ss:Type="String">13:26</Data></Cell>
+    <Cell><Data ss:Type="String">14:21</Data></Cell>
+    <Cell><Data ss:Type="String">15:06</Data></Cell>
+    <Cell><Data ss:Type="String">16:01</Data></Cell>
+    <Cell><Data ss:Type="String">16:46</Data></Cell>
+    <Cell><Data ss:Type="String">17:41</Data></Cell>
+    <Cell><Data ss:Type="String">18:26</Data></Cell>
+    <Cell><Data ss:Type="String">19:21</Data></Cell>
+    <Cell><Data ss:Type="String">20:06</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">6:21</Data></Cell>
+    <Cell><Data ss:Type="String">7:06</Data></Cell>
+    <Cell><Data ss:Type="String">7:51</Data></Cell>
+    <Cell><Data ss:Type="String">8:36</Data></Cell>
+    <Cell><Data ss:Type="String">9:31</Data></Cell>
+    <Cell><Data ss:Type="String">10:16</Data></Cell>
+    <Cell><Data ss:Type="String">11:11</Data></Cell>
+    <Cell><Data ss:Type="String">11:56</Data></Cell>
+    <Cell><Data ss:Type="String">12:51</Data></Cell>
+    <Cell><Data ss:Type="String">13:36</Data></Cell>
+    <Cell><Data ss:Type="String">14:31</Data></Cell>
+    <Cell><Data ss:Type="String">15:16</Data></Cell>
+    <Cell><Data ss:Type="String">16:11</Data></Cell>
+    <Cell><Data ss:Type="String">16:56</Data></Cell>
+    <Cell><Data ss:Type="String">17:51</Data></Cell>
+    <Cell><Data ss:Type="String">18:36</Data></Cell>
+    <Cell><Data ss:Type="String">19:31</Data></Cell>
+    <Cell><Data ss:Type="String">20:16</Data></Cell>
+    <Cell><Data ss:Type="String">20:57</Data></Cell>
+    <Cell><Data ss:Type="String">21:46</Data></Cell>
+    <Cell><Data ss:Type="String">22:37</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s21"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">8:01</Data></Cell>
+    <Cell><Data ss:Type="String">8:46</Data></Cell>
+    <Cell><Data ss:Type="String">9:41</Data></Cell>
+    <Cell><Data ss:Type="String">10:26</Data></Cell>
+    <Cell><Data ss:Type="String">11:21</Data></Cell>
+    <Cell><Data ss:Type="String">12:06</Data></Cell>
+    <Cell><Data ss:Type="String">13:01</Data></Cell>
+    <Cell><Data ss:Type="String">13:46</Data></Cell>
+    <Cell><Data ss:Type="String">14:41</Data></Cell>
+    <Cell><Data ss:Type="String">15:26</Data></Cell>
+    <Cell><Data ss:Type="String">16:21</Data></Cell>
+    <Cell><Data ss:Type="String">17:06</Data></Cell>
+    <Cell><Data ss:Type="String">18:01</Data></Cell>
+    <Cell><Data ss:Type="String">18:46</Data></Cell>
+    <Cell><Data ss:Type="String">19:41</Data></Cell>
+    <Cell><Data ss:Type="String">20:26</Data></Cell>
+    <Cell><Data ss:Type="String">21:17</Data></Cell>
+    <Cell><Data ss:Type="String">22:06</Data></Cell>
+    <Cell><Data ss:Type="String">22:57</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <PageMargins x:Bottom="0.984251969" x:Left="0.78740157499999996"
+     x:Right="0.78740157499999996" x:Top="0.984251969"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

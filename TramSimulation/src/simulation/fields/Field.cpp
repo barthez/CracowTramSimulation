@@ -58,6 +58,12 @@ String Field::toString() const {
   for (CDirIT it = directs.begin(); it != directs.end(); ++it) {
     ss << "\t" << it->first << "\n";
   }
+  std::cout << "Tramwaje:\n";
+  std::vector<Tram*>::const_iterator it;
+  for (it = trams.begin(); it != trams.end(); ++it) {
+    std::cout << "\t" << (std::string) **it << "\n";
+
+  }
   return ss.str();
 }
 
@@ -66,7 +72,7 @@ void Field::update(const DateTime & time) {
   std::vector< Tram*>::iterator it;
   for (it = this->trams.begin(); it != this->trams.end(); ++it) {
     if (directs.count((*it)->nextStop()) > 0) {
-      directs[(*it)->nextStop()]->insertTramLater((*it), speed / 2);
+      directs[(*it)->nextStop()]->insertTramLater((*it), speed / 12);
     } else {
       nextTrams.push_back(*it);
     }
@@ -79,10 +85,10 @@ void Field::nextState() {
   trams = nextTrams;
   nextTrams = std::vector< Tram*>();
   if (trams.size() > 0) {
-//    std::cout << name << ":\n";
+    //    std::cout << name << ":\n";
     std::vector<Tram*>::iterator it;
     for (it = trams.begin(); it != trams.end(); ++it) {
-//      std::cout << "\t" << (std::string) **it << "\n";
+      //      std::cout << "\t" << (std::string) **it << "\n";
       (*it)->setPosition(x, y);
     }
   }

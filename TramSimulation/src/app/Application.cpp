@@ -12,10 +12,10 @@
 
 #include "Application.h"
 
-std::string linie[] = { "linia12.xml" };
+std::string linie[] = { "linia12.xml", "50.xml" };
 
 
-Application::Application(int x, int y, int bpp, const char * title) : sim(std::vector<std::string>(linie, linie+1), "przystanki.xml") {
+Application::Application(int x, int y, int bpp, const char * title) : sim(std::vector<std::string>(linie, linie+2), "przystanki.xml") {
   this->Init(x, y, bpp, title);
 }
 

@@ -51,7 +51,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/simulation/Simulation.o \
 	${OBJECTDIR}/src/simulation/DateTime.o \
 	${OBJECTDIR}/src/simulation/entities/Car.o \
-	${OBJECTDIR}/src/tinyxml/xmltest.o \
 	${OBJECTDIR}/src/tinyxml/tinyxmlerror.o \
 	${OBJECTDIR}/src/simulation/fields/TramStop.o
 
@@ -70,7 +69,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-lSDL -lSDL_image -lSDL_ttf -lSDL_gfx -lpthread
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -169,11 +168,6 @@ ${OBJECTDIR}/src/simulation/entities/Car.o: src/simulation/entities/Car.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/simulation/entities
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/simulation/entities/Car.o src/simulation/entities/Car.cpp
-
-${OBJECTDIR}/src/tinyxml/xmltest.o: src/tinyxml/xmltest.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/tinyxml/xmltest.o src/tinyxml/xmltest.cpp
 
 ${OBJECTDIR}/src/tinyxml/tinyxmlerror.o: src/tinyxml/tinyxmlerror.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/tinyxml
